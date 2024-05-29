@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "552121280874",
+    "project_id": "website-a5924",
+    "storage_bucket": "website-a5924.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:552121280874:android:1d1b81c78f40f4460ddd13",
+        "android_client_info": {
+          "package_name": "com.example.mantaray_website"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1J4-5UNWOKP6IuZaIi0afspuBtSN8WRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
