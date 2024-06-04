@@ -16,5 +16,10 @@ class AppImages{
   static const String sixImage= "assets/images/Field operations 1.png";
   static const String reserviorImage= "assets/images/Field Dev Plan 1.png";
   static const String softwareLogoImage= "assets/images/Rectangle 18.png";
+  static const String facebookImage= "assets/images/Ellipse 48.png";
+  static const String linkedInImage= "assets/images/Linked in.png";
+  static const String phoneImage= "assets/images/Phone.png";
+  static const String emailImage= "assets/images/Massage.png";
+
 
 }

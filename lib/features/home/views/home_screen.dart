@@ -50,26 +50,33 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     return Scaffold(
       appBar: AppBar(
-        leading: isMobile? null :GestureDetector(
-          onTap: refreshPage,
-            child: Image.asset(AppImages.appLogo)),
-        centerTitle: true,
+        flexibleSpace: Container(
+          decoration:  BoxDecoration(
+            color: AppColors.greyColor.withOpacity(.8),
+            borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20))
+          ),
+        ),
+        toolbarHeight: 95,
+        centerTitle:isMobile? true:false,
         title: isMobile?GestureDetector(
           onTap: refreshPage,
-            child: Image.asset(AppImages.appLogo,height: 80,width: 80,)):null,
+            child: Image.asset(AppImages.appLogo,height: 120,width: 120,))
+            :GestureDetector(
+            onTap: refreshPage,
+            child: Image.asset(AppImages.appLogo,height: 120,width: 120,)),
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: isMobile
             ? null
             : [
-          buildTextButton(label: 'Home', key: _homeKey),
-          buildTextButton(label: 'About Us', key: _aboutUsKey),
-          buildTextButton(label: 'Our Services', key: _ourServicesKey),
-          buildTextButton(label: 'Production', key: _productionKey),
-          buildTextButton(label: 'Software', key: _softwareKey),
-          buildTextButton(label: 'Consultation', key: _consultationKey),
-          buildTextButton(label: 'Our Partners', key: _ourPartnersKey),
-          buildTextButton(label: 'Contact Us', key: _contactUsKey),
+          buildTextButton(label: 'Home', key: _homeKey, ),
+          buildTextButton(label: 'About Us', key: _aboutUsKey, ),
+          buildTextButton(label: 'Our Services', key: _ourServicesKey, ),
+          buildTextButton(label: 'Production', key: _productionKey, ),
+          buildTextButton(label: 'Software', key: _softwareKey, ),
+          buildTextButton(label: 'Consultation', key: _consultationKey, ),
+          buildTextButton(label: 'Our Partners', key: _ourPartnersKey, ),
+          buildTextButton(label: 'Contact Us', key: _contactUsKey, ),
         ],
       ),
       drawer: isMobile
@@ -85,28 +92,28 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Image.asset(AppImages.appLogo,height: 200,width: 200,)
             ),
             ListTile(
-              title: buildTextButton(label: 'Home', key: _homeKey),
+              title: buildTextButtonMobileAndTablet(label: 'Home', key: _homeKey, context: context,),
             ),
             ListTile(
-              title: buildTextButton(label: 'About Us', key: _aboutUsKey),
+              title: buildTextButtonMobileAndTablet(label: 'About Us', key: _aboutUsKey, context: context,),
             ),
             ListTile(
-              title: buildTextButton(label: 'Our Services', key: _ourServicesKey),
+              title: buildTextButtonMobileAndTablet(label: 'Our Services', key: _ourServicesKey, context: context,),
             ),
             ListTile(
-              title: buildTextButton(label: 'Production', key: _productionKey),
+              title: buildTextButtonMobileAndTablet(label: 'Production', key: _productionKey, context: context,),
             ),
             ListTile(
-              title: buildTextButton(label: 'Software', key: _softwareKey),
+              title: buildTextButtonMobileAndTablet(label: 'Software', key: _softwareKey, context: context,),
             ),
             ListTile(
-              title: buildTextButton(label: 'Consultation', key: _consultationKey),
+              title: buildTextButtonMobileAndTablet(label: 'Consultation', key: _consultationKey, context: context,),
             ),
             ListTile(
-              title: buildTextButton(label: 'Our Partners', key: _ourPartnersKey),
+              title: buildTextButtonMobileAndTablet(label: 'Our Partners', key: _ourPartnersKey, context: context,),
             ),
             ListTile(
-              title: buildTextButton(label: 'Contact Us', key: _contactUsKey),
+              title: buildTextButtonMobileAndTablet(label: 'Contact Us', key: _contactUsKey, context: context,),
             ),
           ],
         ),
@@ -117,16 +124,16 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            buildSection(key: _homeKey,widget: const HomeSection(), height: 450, color: Colors.white),
-            buildSection(key: _aboutUsKey, widget: const AboutUsSection(), height: 900, color:  Colors.white),
-            buildSection(key: _ourServicesKey, widget: const OurServicesSection(), height: 2650, color:  Colors.white),
-            buildSection(key: _productionKey, widget: const ProductionSection(), height: 1830, color: Colors.white),
-            buildSection(key: _softwareKey, widget: const SoftwareSection(), height: 800, color:  Colors.white),
-            buildSection(key: _consultationKey, widget:const ConsultationSection(), height:isMobile? 2100 :1720, color:  Colors.white),
+            buildSection(key: _homeKey,widget: const HomeSection(), height: 450, color: AppColors.whiteColor),
+            buildSection(key: _aboutUsKey, widget: const AboutUsSection(), height: 900, color:  AppColors.whiteColor),
+            buildSection(key: _ourServicesKey, widget: const OurServicesSection(), height: 2250, color:  AppColors.whiteColor),
+            buildSection(key: _productionKey, widget: const ProductionSection(), height: 1830, color: AppColors.whiteColor),
+            buildSection(key: _softwareKey, widget: const SoftwareSection(), height: 800, color:  AppColors.whiteColor),
+            buildSection(key: _consultationKey, widget:const ConsultationSection(), height:isMobile? 2100 :1720, color:  AppColors.whiteColor),
             const SizedBox(height:120 ,),
             const ReserviorSection(),
             buildSection(key: _ourPartnersKey, widget: const OurPartnersSection(), height: 200, color: AppColors.primaryColor),
-            buildSection(key: _contactUsKey, widget:const ContactUsSection(), height: 70, color:  Colors.white),
+            buildSection(key: _contactUsKey, widget:const ContactUsSection(), height: 70, color:  AppColors.whiteColor),
           ],
         ),
       ),

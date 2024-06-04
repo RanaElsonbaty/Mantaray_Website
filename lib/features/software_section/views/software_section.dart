@@ -25,8 +25,8 @@ class _SoftwareSectionState extends State<SoftwareSection> {
         return  LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
             final screenWidth = constraints.maxWidth;
-            final isMobile = screenWidth < 800;
-            final isTablet = screenWidth >= 800 && screenWidth < 970;
+            final isMobile = screenWidth < 650;
+            final isTablet = screenWidth >= 650 && screenWidth < 970;
 
             double getResponsiveFontSize(double baseFontSize) {
               if (isMobile) {
@@ -78,7 +78,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.only(left: 20),
+                  padding: const EdgeInsets.only(left: 10),
                   width: double.infinity,
                   height: 600,
                   decoration:  BoxDecoration(
@@ -112,7 +112,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                 )
               ],
             )
-                :Container()
+                :const Center(child: CircularProgressIndicator())
                 : isTablet? layoutCubit.websiteModel!=null? Column(
               children: [
                 Padding(
@@ -162,7 +162,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                         ),
                         const SizedBox(height: 25,),
                         SizedBox(
-                            width: getResponsiveContainerWidth(700),
+                           // width: getResponsiveContainerWidth(700),
                             child: Text(layoutCubit.websiteModel!.softwareContent!,
                               style: GoogleFonts.inter(
                                   textStyle:TextStyle(
@@ -177,7 +177,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                 )
               ],
             )
-                :Container()
+                :const Center(child: CircularProgressIndicator())
                 :layoutCubit.websiteModel!=null? Column(
               children: [
                 Padding(
@@ -246,7 +246,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                 )
               ],
             )
-                :Container();
+                :const Center(child: CircularProgressIndicator());
           },
 
         );

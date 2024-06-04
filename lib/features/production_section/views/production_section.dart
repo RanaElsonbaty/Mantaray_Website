@@ -104,7 +104,7 @@ class _ProductionSectionState extends State<ProductionSection> {
                   ),
                   SizedBox(
                       width:90.w,
-                      child: Text("Testing:   Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
+                      child: Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
                         maxLines: 5,
                         style: GoogleFonts.inter(
                             textStyle:TextStyle(
@@ -218,7 +218,7 @@ class _ProductionSectionState extends State<ProductionSection> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
-                      width: getResponsiveContainerWidth(700),
+                     // width: getResponsiveContainerWidth(700),
                       child: Text("Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
                         // maxLines: 4,
                         style: GoogleFonts.inter(
@@ -236,7 +236,7 @@ class _ProductionSectionState extends State<ProductionSection> {
                         color: AppColors.blackColor),
                   ),
                   SizedBox(
-                      width: getResponsiveContainerWidth(700),
+                     // width: getResponsiveContainerWidth(700),
                       child: Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
                         // maxLines: 4,
                         style: GoogleFonts.inter(
@@ -274,7 +274,7 @@ class _ProductionSectionState extends State<ProductionSection> {
                         color: AppColors.blackColor),
                   ),
                   SizedBox(
-                      width: getResponsiveContainerWidth(700),
+                     // width: getResponsiveContainerWidth(700),
                       child: Text("Mantaray provides advanced polymer technologies to improve the performance and  economics of Oil & Gas extraction operations.  Our solutions are designed to meet or exceed  the needs of our customers in the Oil & Gas industry.  In all Oil & Gas applications, Mantaray offers tailored polymers and equipment solutions  from conceptual lab studies through to full-field operations.  Our support services include:",
                         // maxLines: 4,
                         style: GoogleFonts.inter(

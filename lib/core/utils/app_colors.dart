@@ -16,5 +16,6 @@ class AppColors{
  static const Color secondaryColor= Color(0xff008EBD);
  static const Color loadingColor= Color(0xff00C6E0);
  static const Color backGroundColor= Color(0xffF7F8FA);
+ static const Color contactUsColor= Color(0xff334957);
 
 }

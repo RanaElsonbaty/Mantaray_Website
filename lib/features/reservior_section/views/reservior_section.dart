@@ -119,7 +119,7 @@ class _ReserviorSectionState extends State<ReserviorSection> {
                 )
               ],
             )
-                :Container()
+                :const Center(child: CircularProgressIndicator())
                 :layoutCubit.websiteModel!=null? Column(
               children: [
                 Padding(
@@ -193,7 +193,7 @@ class _ReserviorSectionState extends State<ReserviorSection> {
                 )
               ],
             )
-                :Container();
+                :const Center(child: CircularProgressIndicator());
           },
         );
       },

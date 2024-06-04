@@ -20,9 +20,9 @@ class _AboutUsSectionState extends State<AboutUsSection> {
   bool showLearnMore = true; // Initial value for showing "Learn more" button
   bool showLearnMoreMobile = true; // Initial value for showing "Learn more" button
   bool showLearnMoreTablet = true; // Initial value for showing "Learn more" button for tablet
-  double containerHeight = 400; // Initial value for container height
+  double containerHeight = 300; // Initial value for container height
   double containerHeightMobile = 450; // Initial value for container height
-  double containerHeightTablet = 400; // Initial value for container height for tablet
+  double containerHeightTablet = 350; // Initial value for container height for tablet
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class _AboutUsSectionState extends State<AboutUsSection> {
           builder: (context, constraints) {
             final screenWidth = constraints.maxWidth;
             final isMobile = screenWidth < 620;
-            final isTablet = screenWidth >= 620 && screenWidth < 970;
+            final isTablet = screenWidth >= 620 && screenWidth < 1170;
 
             double getResponsiveFontSize(double baseFontSize) {
               if (isMobile) {
@@ -116,12 +116,17 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Image.asset(
-                          "assets/lottie/lottie.gif",
-                          height: 100,
-                          width: 100,
+                        const CircleAvatar(
+                          radius: 50,
+                          backgroundImage: AssetImage("assets/images/about-us.jpg"),
                         ),
+                        // Image.asset(
+                        //   "assets/images/about-us.jpg",
+                        //   height: 100,
+                        //   width: 100,
+                        // ),
                         Container(
+                          margin: const EdgeInsets.only(top: 20),
                           padding: const EdgeInsets.all(8),
                           width:70.w,
                           height: containerHeightMobile,
@@ -192,12 +197,17 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                   else if (isTablet)
                     Column(
                       children: [
-                        Image.asset(
-                          "assets/lottie/lottie.gif",
-                          height: 150,
-                          width: 150,
+                        const CircleAvatar(
+                          radius: 70,
+                          backgroundImage: AssetImage("assets/images/about-us.jpg"),
                         ),
+                        // Image.asset(
+                        //   "assets/images/about-us.jpg",
+                        //   height: 150,
+                        //   width: 150,
+                        // ),
                         Container(
+                          margin: const EdgeInsets.only(top: 40),
                           padding: const EdgeInsets.all(20),
                           height: containerHeightTablet, // Dynamic container height for tablet
                           decoration: BoxDecoration(
@@ -211,7 +221,7 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                                 layoutCubit.websiteModel!.aboutTitle!,
                                 style: TextStyle(
                                     color: AppColors.blackColor,
-                                    fontSize: getResponsiveFontSize(18),
+                                    fontSize: getResponsiveFontSize(24),
                                     fontWeight: FontWeight.bold),
                               ),
                               SizedBox(
@@ -258,13 +268,19 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                       ],
                     )
                   else
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    Column(
+                     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+                        const CircleAvatar(
+                          radius: 90,
+                          backgroundImage: AssetImage("assets/images/about-us.jpg"),
+                        ),
+                        const SizedBox(height: 50,),
                         Container(
+                          margin: const EdgeInsets.all(20),
                           padding: const EdgeInsets.all(20),
                           height: containerHeight, // Dynamic container height
-                          width: getResponsiveContainerWidth(800),
+                          width: getResponsiveContainerWidth(3000),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             color: AppColors.backGroundColor,
@@ -276,17 +292,18 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                                 layoutCubit.websiteModel!.aboutTitle!,
                                 style: TextStyle(
                                     color: AppColors.blackColor,
-                                    fontSize: getResponsiveFontSize(18),
+                                    fontSize: getResponsiveFontSize(22),
                                     fontWeight: FontWeight.bold),
                               ),
                               SizedBox(
-                                width: getResponsiveContainerWidth(700),
+                                width: getResponsiveContainerWidth(2600),
                                 child: Text(
                                   layoutCubit.websiteModel!.aboutContent!,
                                   maxLines: maxLines,
                                     style: GoogleFonts.inter(
-                                        textStyle: const TextStyle(
+                                        textStyle:  TextStyle(
                                           color: AppColors.primaryColor,
+                                          fontSize: getResponsiveFontSize(18),
                                         )
                                     )
                                 ),
@@ -319,19 +336,20 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                             ],
                           ),
                         ),
-                        SizedBox(width: getResponsiveContainerWidth(40)),
-                        Expanded(
-                          child: Image.asset(
-                            "assets/lottie/lottie.gif",
-                            height: 300,
-                          ),
-                        ),
+                         // ClipRRect(
+                         //   borderRadius: BorderRadiusDirectional.circular(50),
+                         //   child: Image.asset(
+                         //     "assets/images/about-us.jpg",
+                         //     height: 200,
+                         //     width: 200,
+                         //   ),
+                         // ),
                       ],
                     ),
                 ],
               ),
             )
-            :Container();
+            :const Center(child: CircularProgressIndicator());
           },
         );
       },

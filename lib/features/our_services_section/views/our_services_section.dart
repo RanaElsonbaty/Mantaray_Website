@@ -82,7 +82,7 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                 Container(
                   padding: const EdgeInsets.only(top: 90),
                   width: double.infinity,
-                  height: 2500,
+                  height: 2150,
                   decoration:  BoxDecoration(
                       color: AppColors.backGroundColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -105,7 +105,7 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                 )
               ],
             )
-                :Container()
+                :const Center(child: CircularProgressIndicator())
                 :layoutCubit.websiteModel!=null? Column(
               children: [
                 Padding(
@@ -146,21 +146,22 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                   ),
                   child: Column(
                     children: [
+                      const SizedBox(height: 50,),
                       CustomColumnDeskLeftCurved(
                         fontSize:  getResponsiveFontSize(24),
                         text: layoutCubit.websiteModel!.servicesProductionTitle!, width: getResponsiveContainerWidth(550), content: layoutCubit.websiteModel!.servicesProductionContent!, url: AppImages.leftCurvedLine, fontSizContent: getResponsiveFontSize(26), number: '1', image: AppImages.productionImage,
                       ),
-                      const SizedBox(height: 30,),
+                      const SizedBox(height: 60,),
                       CustomColumnDeskRightCurved(
                         fontSize:  getResponsiveFontSize(24),
                         text: layoutCubit.websiteModel!.servicesApplicationsTitle!, width: getResponsiveContainerWidth(550), content: layoutCubit.websiteModel!.servicesApplicationsContent!, url: AppImages.rightCurvedLine, fontSizContent: getResponsiveFontSize(26), number: '2', image: AppImages.applicationImage,
                       ),
-                      const SizedBox(height: 30,),
+                      const SizedBox(height: 60,),
                       CustomColumnDeskLeftCurved(
                         fontSize:  getResponsiveFontSize(24),
                         text: layoutCubit.websiteModel!.servicesSoftwareTitle!, width: getResponsiveContainerWidth(550), content: layoutCubit.websiteModel!.servicesSoftwareContent!, url: AppImages.leftCurvedLine, fontSizContent: getResponsiveFontSize(26), number: '3', image: AppImages.softwareImage,
                       ),
-                      const SizedBox(height: 30,),
+                      const SizedBox(height: 60,),
                       CustomColumnDeskRightCurved(
                         fontSize:  getResponsiveFontSize(24),
                         text: layoutCubit.websiteModel!.servicesConsultationTitle!, width: getResponsiveContainerWidth(550), content: layoutCubit.websiteModel!.servicesConsultationContent!, url: AppImages.rightCurvedLine, fontSizContent: getResponsiveFontSize(26), number: '4', image: AppImages.consultationImage,
@@ -170,7 +171,7 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                 )
               ],
             )
-                :Container();
+                :const Center(child: CircularProgressIndicator());
           },
 
         );

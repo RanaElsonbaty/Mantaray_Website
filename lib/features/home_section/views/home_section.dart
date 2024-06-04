@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mantaray_website/core/utils/app_colors.dart';
@@ -15,7 +14,7 @@ class HomeSection extends StatelessWidget {
     return  BlocConsumer<LayoutCubit,LayoutStates>(
       listener: (BuildContext context, state) {  },
       builder: (BuildContext context, state) {
-        return layoutCubit.websiteModel!=null? Stack(
+        return Stack(
             children: [
                Container(
                   width: double.infinity,
@@ -26,9 +25,9 @@ class HomeSection extends StatelessWidget {
                ),
                    
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 90),
+                padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: Center(
-                  child: Text( layoutCubit.websiteModel!.bannerDescription!,
+                  child:layoutCubit.websiteModel!=null? Text( layoutCubit.websiteModel!.bannerDescription!,
                     maxLines: 8,
                     style: GoogleFonts.inter(
                         textStyle:const TextStyle(
@@ -36,10 +35,9 @@ class HomeSection extends StatelessWidget {
                             fontWeight: FontWeight.w400,
                             fontSize: 18
                         )
-                    ),),
+                    ),):const CircularProgressIndicator(),
                 ),
-              )])
-        :Container();
+              )]);
       },
 
     );

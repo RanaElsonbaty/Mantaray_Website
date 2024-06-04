@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:mantaray_website/core/utils/app_colors.dart';
+import 'package:mantaray_website/core/utils/app_images.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactUsSection extends StatefulWidget {
@@ -42,31 +43,38 @@ class _ContactUsSectionState extends State<ContactUsSection> {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
             child: GNav(
-              rippleColor: Colors.grey[300]!,
-              hoverColor: Colors.grey[100]!,
+              rippleColor: AppColors.contactUsColor,
+              hoverColor: AppColors.contactUsColor,
               gap: 4,
               activeColor: Colors.black,
               iconSize: 20,
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: const Duration(milliseconds: 400),
-              tabBackgroundColor: AppColors.whiteColor,
+              tabBackgroundColor: AppColors.contactUsColor,
               color: AppColors.whiteColor,
-              tabs: const [
-                GButton(
+              tabs:  [
+                 GButton(
+                  leading:Image.asset(AppImages.facebookImage,height: 30,width: 20,) ,
                   icon: Icons.facebook,
                   text: 'Facebook',
+                   textColor: AppColors.whiteColor,
                 ),
                 GButton(
-                  icon: Icons.language,
-                  text: 'LinkedIn',
+                  leading:Image.asset(AppImages.linkedInImage,height: 30,width: 20,) ,
+                  text: 'LinkedIn', icon: Icons.label,
+                  textColor: AppColors.whiteColor,
                 ),
-                GButton(
+                 GButton(
+                   leading:Image.asset(AppImages.phoneImage,height: 30,width: 20,) ,
                   icon: Icons.phone_outlined,
                   text: 'Phone',
+                   textColor: AppColors.whiteColor,
                 ),
-                GButton(
+                 GButton(
+                   leading:Image.asset(AppImages.emailImage,height: 30,width: 20,) ,
                   icon: Icons.email,
                   text: 'Email',
+                   textColor: AppColors.whiteColor,
                 ),
               ],
               selectedIndex: _selectedIndex,
@@ -75,16 +83,16 @@ class _ContactUsSectionState extends State<ContactUsSection> {
                   _selectedIndex = index;
                   switch (index) {
                     case 0:
-                      _launchUrl('https://www.facebook.com/rana.elsonbaty.96?mibextid=ZbWKwL');
+                      _launchUrl('https://www.facebook.com/profile.php?id=61560387304276');
                       break;
                     case 1:
-                      _launchUrl('https://www.linkedin.com/in/rana-elsonbaty-b65b40250');
+                      _launchUrl('https://www.linkedin.com/company/103261271/admin/feed/posts/?feedType=following');
                       break;
                     case 2:
-                      _launchUrl('tel:+1210772310'); // This should work on a real device
+                      _launchUrl('tel:01226151694'); // This should work on a real device
                       break;
                     case 3:
-                      _launchUrl('mailto:rewanelsonbaty735@gmail.com'); // Use mailto: scheme for email
+                      _launchUrl('mailto:Support@mantarayltd.com'); // Use mailto: scheme for email
                       break;
                   }
                 });
