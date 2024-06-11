@@ -1,4 +1,6 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mantaray_website/features/home/views/home_screen.dart';
@@ -11,7 +13,12 @@ void main()async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const MyApp());
+  runApp(DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (BuildContext context) {
+        return const MyApp();
+      },
+     ));
 }
 
 class MyApp extends StatelessWidget {
@@ -25,9 +32,11 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider(create: (context)=>LayoutCubit())
         ],
-        child: const MaterialApp(
+        child:  MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: HomeScreen(),
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
+          home: const HomeScreen(),
         ),
       );
     });

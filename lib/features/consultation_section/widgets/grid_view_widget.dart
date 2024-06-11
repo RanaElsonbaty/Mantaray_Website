@@ -4,29 +4,34 @@ import 'package:mantaray_website/core/utils/app_colors.dart';
 import 'package:mantaray_website/features/consultation_section/data/model/consultation_model.dart';
 
 class GridViewWidget extends StatelessWidget {
-  const GridViewWidget({super.key, required this.index});
+  const GridViewWidget({super.key, required this.index, required this.size, required this.titleSize});
   final int index;
+  final double size;
+  final double titleSize;
   @override
   Widget build(BuildContext context) {
     return  Container(
-      padding: const EdgeInsets.all(8),
       color: consultList[index].color,
-      child:  Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(consultList[index].title,style: GoogleFonts.inter(
-              textStyle:const TextStyle(
-                fontWeight: FontWeight.w700,
-                color: AppColors.primaryColor
-              )
-            ),),
-            const SizedBox(height: 12,),
-            Text(consultList[index].content,style: GoogleFonts.inter(
-                textStyle:const TextStyle(
-                    color: AppColors.whiteColor
-                )))
-          ],
+      child:  Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: Column(
+            children: [
+              Text(consultList[index].title,style: GoogleFonts.inter(
+                textStyle: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: titleSize,
+                  color: AppColors.primaryColor
+                )
+              ),),
+              const SizedBox(height: 12,),
+              Text(consultList[index].content,style: GoogleFonts.inter(
+                  textStyle: TextStyle(
+                    fontSize: size,
+                      color: AppColors.whiteColor
+                  )))
+            ],
+          ),
         ),
       ),
     );

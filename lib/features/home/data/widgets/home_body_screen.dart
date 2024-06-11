@@ -77,7 +77,7 @@ Widget buildTextButton({required String label, required GlobalKey key,}) {
       style: GoogleFonts.inter(
         textStyle: const TextStyle(
           color: AppColors.primaryColor,
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w700,
           fontSize: 18, // Use a fixed font size initially
         ),
       ),

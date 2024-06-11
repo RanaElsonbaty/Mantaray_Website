@@ -21,7 +21,7 @@ class ColoredMantaRayWordWidget extends StatelessWidget {
           text: text.substring(lastMatchEnd, match.start),
           style: GoogleFonts.inter(
             textStyle: TextStyle(
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w500,
               color: AppColors.primaryColor,
               fontSize: fontSize,
             ),
@@ -46,7 +46,7 @@ class ColoredMantaRayWordWidget extends StatelessWidget {
         text: text.substring(lastMatchEnd),
         style: GoogleFonts.inter(
           textStyle: TextStyle(
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w500,
             color: AppColors.primaryColor,
             fontSize: fontSize,
           ),

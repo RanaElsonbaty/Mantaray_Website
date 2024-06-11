@@ -24,9 +24,9 @@ class _SoftwareSectionState extends State<SoftwareSection> {
       builder: (BuildContext context, Object? state) {
         return  LayoutBuilder(
           builder: (BuildContext context, BoxConstraints constraints) {
-            final screenWidth = constraints.maxWidth;
-            final isMobile = screenWidth < 650;
-            final isTablet = screenWidth >= 650 && screenWidth < 970;
+            final screenWidth = MediaQuery.of(context).size.width;
+            final isMobile = screenWidth < 960;
+            final isTablet = screenWidth >= 960 && screenWidth < 1900;
 
             double getResponsiveFontSize(double baseFontSize) {
               if (isMobile) {
@@ -80,7 +80,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                 Container(
                   padding: const EdgeInsets.only(left: 10),
                   width: double.infinity,
-                  height: 600,
+                  height: 450,
                   decoration:  BoxDecoration(
                       color: AppColors.whiteColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -90,12 +90,12 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                       children: [
                         Row(
                           children: [
-                            Image.asset(AppImages.softwareSectionImage,height: 170,width: 170,),
-                            Image.asset(AppImages.softwareLogoImage,height: 60,width: 60,),
+                            Image.asset(AppImages.softwareSectionImage,width: 75.w,),
+                            Image.asset(AppImages.softwareLogoImage,height: 15.h,width: 15.w,),
 
                           ],
                         ),
-                        SizedBox(height: 9.h,),
+                        SizedBox(height: 3.h,),
                         SizedBox(
                             width:90.w,
                             child: Text(layoutCubit.websiteModel!.softwareContent!,
@@ -144,7 +144,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                   ),
                 ),
                 Container(
-                  height: 700,
+                  height: 800,
                   decoration:  BoxDecoration(
                       color: AppColors.whiteColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -155,22 +155,25 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Image.asset(AppImages.softwareSectionImage,width: 300,height: 300,),
-                            const SizedBox(width: 40,),
-                            Image.asset(AppImages.softwareLogoImage,width: 100,height: 100,),
+                            Image.asset(AppImages.softwareSectionImage,width: 70.w,),
+                            SizedBox(width: 3.w,),
+                            Image.asset(AppImages.softwareLogoImage,height: 7.h,width: 7.w,),
                           ],
                         ),
-                        const SizedBox(height: 25,),
-                        SizedBox(
-                           // width: getResponsiveContainerWidth(700),
-                            child: Text(layoutCubit.websiteModel!.softwareContent!,
-                              style: GoogleFonts.inter(
-                                  textStyle:TextStyle(
-                                      color: AppColors.blackColor,
-                                      fontWeight: FontWeight.w700,
-                                      fontSize: getResponsiveFontSize(22)
-                                  )
-                              ),))
+                        SizedBox(height: 7.h,),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: SizedBox(
+                             // width: getResponsiveContainerWidth(700),
+                              child: Text(layoutCubit.websiteModel!.softwareContent!,
+                                style: GoogleFonts.inter(
+                                    textStyle:TextStyle(
+                                        color: AppColors.blackColor,
+                                        fontWeight: FontWeight.w700,
+                                        fontSize: getResponsiveFontSize(22).sp
+                                    )
+                                ),)),
+                        )
                       ],
                     ),
                   ),
@@ -210,37 +213,37 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 700,
+                  height: 800,
                   decoration:  BoxDecoration(
                       color: AppColors.whiteColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(20),
-                    child: Center(
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Image.asset(AppImages.softwareSectionImage,height: 500,width: 500,),
-                              const SizedBox(width: 60,),
-                              Image.asset(AppImages.softwareLogoImage,height: 100,width: 100,),
-                            ],
-                          ),
-                          const SizedBox(height: 25,),
-                          SizedBox(
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(AppImages.softwareSectionImage,),
+                            SizedBox(width: 7.w,),
+                            Image.asset(AppImages.softwareLogoImage,height: 10.h,width: 10.w,),
+                          ],
+                        ),
+                        SizedBox(height: 7.h,),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: SizedBox(
                               width: getResponsiveContainerWidth(2500),
                               child: Text(layoutCubit.websiteModel!.softwareContent!,
                                 style: GoogleFonts.inter(
                                     textStyle:TextStyle(
                                         color: AppColors.blackColor,
                                         fontWeight: FontWeight.w700,
-                                        fontSize: getResponsiveFontSize(22)
+                                        fontSize: getResponsiveFontSize(18).sp
                                     )
-                                ),))
-                        ],
-                      ),
+                                ),)),
+                        )
+                      ],
                     ),
                   ),
                 )

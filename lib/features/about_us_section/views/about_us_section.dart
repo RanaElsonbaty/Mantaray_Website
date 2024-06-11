@@ -21,7 +21,7 @@ class _AboutUsSectionState extends State<AboutUsSection> {
   bool showLearnMoreMobile = true; // Initial value for showing "Learn more" button
   bool showLearnMoreTablet = true; // Initial value for showing "Learn more" button for tablet
   double containerHeight = 300; // Initial value for container height
-  double containerHeightMobile = 450; // Initial value for container height
+  double containerHeightMobile = 380; // Initial value for container height
   double containerHeightTablet = 350; // Initial value for container height for tablet
 
   @override
@@ -34,7 +34,7 @@ class _AboutUsSectionState extends State<AboutUsSection> {
           builder: (context, constraints) {
             final screenWidth = constraints.maxWidth;
             final isMobile = screenWidth < 620;
-            final isTablet = screenWidth >= 620 && screenWidth < 1170;
+            final isTablet = screenWidth >= 620 && screenWidth < 1600;
 
             double getResponsiveFontSize(double baseFontSize) {
               if (isMobile) {
@@ -151,6 +151,7 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                                   maxLines: maxLinesMobile,
                                   style: GoogleFonts.inter(
                                     textStyle:const TextStyle(
+                                      fontWeight: FontWeight.w400,
                                       color: AppColors.primaryColor
                                     )
                                   )
@@ -173,7 +174,7 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                                         } else {
                                           maxLinesMobile = 13; // Reset maxLines
                                           showLearnMoreMobile = true; // Show "Learn more" button
-                                          containerHeightMobile = 450; // Reset container height
+                                          containerHeightMobile = 380; // Reset container height
                                         }
                                       });
                                     },
@@ -232,7 +233,8 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                                     style: GoogleFonts.inter(
                                         textStyle: TextStyle(
                                             color: AppColors.primaryColor,
-                                          fontSize: getResponsiveFontSize(22),
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: getResponsiveFontSize(24),
                                         )
                                     )
                                 ),
@@ -269,13 +271,12 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                     )
                   else
                     Column(
-                     // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         const CircleAvatar(
                           radius: 90,
                           backgroundImage: AssetImage("assets/images/about-us.jpg"),
                         ),
-                        const SizedBox(height: 50,),
+                        const SizedBox(height: 60,),
                         Container(
                           margin: const EdgeInsets.all(20),
                           padding: const EdgeInsets.all(20),
@@ -303,7 +304,8 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                                     style: GoogleFonts.inter(
                                         textStyle:  TextStyle(
                                           color: AppColors.primaryColor,
-                                          fontSize: getResponsiveFontSize(18),
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: getResponsiveFontSize(24),
                                         )
                                     )
                                 ),
