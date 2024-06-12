@@ -31,15 +31,6 @@ class HomeSection extends StatelessWidget {
               }
             }
 
-            double getResponsiveContainerWidth(double baseWidth) {
-              if (isMobile) {
-                return screenWidth * 0.2;
-              } else if (isTablet) {
-                return screenWidth * 0.3;
-              } else {
-                return baseWidth;
-              }
-            }
             return  Stack(
                 children: [
                   Container(
@@ -54,12 +45,13 @@ class HomeSection extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 12),
                     child: Center(
                       child:layoutCubit.websiteModel!=null? Text( layoutCubit.websiteModel!.bannerDescription!,
+                        textAlign: TextAlign.justify,
                         maxLines: 8,
                         style: GoogleFonts.inter(
                             textStyle: TextStyle(
                                 color: AppColors.whiteColor,
                                 fontWeight: FontWeight.w500,
-                                fontSize: isMobile?getResponsiveFontSize(22) :getResponsiveFontSize(36)
+                                fontSize: isMobile?getResponsiveFontSize(22) :getResponsiveFontSize(18).sp
                             )
                         ),):const CircularProgressIndicator(),
                     ),

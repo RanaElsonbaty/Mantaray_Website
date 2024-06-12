@@ -99,6 +99,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                         SizedBox(
                             width:90.w,
                             child: Text(layoutCubit.websiteModel!.softwareContent!,
+                              textAlign: TextAlign.justify,
                               style: GoogleFonts.inter(
                                   textStyle:TextStyle(
                                       color: AppColors.blackColor,
@@ -163,16 +164,15 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                         SizedBox(height: 7.h,),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: SizedBox(
-                             // width: getResponsiveContainerWidth(700),
-                              child: Text(layoutCubit.websiteModel!.softwareContent!,
-                                style: GoogleFonts.inter(
-                                    textStyle:TextStyle(
-                                        color: AppColors.blackColor,
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: getResponsiveFontSize(22).sp
-                                    )
-                                ),)),
+                          child: Text(layoutCubit.websiteModel!.softwareContent!,
+                            textAlign: TextAlign.justify,
+                            style: GoogleFonts.inter(
+                                textStyle:TextStyle(
+                                    color: AppColors.blackColor,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: getResponsiveFontSize(22).sp
+                                )
+                            ),),
                         )
                       ],
                     ),
@@ -198,7 +198,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                       Text(
                         layoutCubit.websiteModel!.softwareHeading!.toUpperCase(),
                         style: TextStyle(
-                            fontSize: getResponsiveFontSize(24),
+                            fontSize: getResponsiveFontSize(18).sp,
                             fontWeight: FontWeight.bold,
                             color: AppColors.primaryColor),
                       ),
@@ -213,7 +213,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 800,
+                  height: 820,
                   decoration:  BoxDecoration(
                       color: AppColors.whiteColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -231,17 +231,16 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                         ),
                         SizedBox(height: 7.h,),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                          child: SizedBox(
-                              width: getResponsiveContainerWidth(2500),
-                              child: Text(layoutCubit.websiteModel!.softwareContent!,
-                                style: GoogleFonts.inter(
-                                    textStyle:TextStyle(
-                                        color: AppColors.blackColor,
-                                        fontWeight: FontWeight.w700,
-                                        fontSize: getResponsiveFontSize(18).sp
-                                    )
-                                ),)),
+                          padding: const EdgeInsets.symmetric(horizontal: 22),
+                          child: Text(layoutCubit.websiteModel!.softwareContent!,
+                            textAlign: TextAlign.justify,
+                            style: GoogleFonts.inter(
+                                textStyle:TextStyle(
+                                    color: AppColors.blackColor,
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: getResponsiveFontSize(18).sp
+                                )
+                            ),),
                         )
                       ],
                     ),

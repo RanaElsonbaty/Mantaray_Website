@@ -28,7 +28,7 @@ class _ReserviorSectionState extends State<ReserviorSection> {
           builder: (BuildContext context, BoxConstraints constraints) {
             final screenWidth = MediaQuery.of(context).size.width;
             final isMobile = screenWidth < 800;
-            final isTablet = screenWidth >= 800 && screenWidth < 1900;
+            final isTablet = screenWidth >= 800 && screenWidth < 1300;
 
             double getResponsiveFontSize(double baseFontSize) {
               if (isMobile) {
@@ -120,7 +120,7 @@ class _ReserviorSectionState extends State<ReserviorSection> {
               ],
             )
                 :const Center(child: CircularProgressIndicator())
-                :layoutCubit.websiteModel!=null? Column(
+                :isTablet?layoutCubit.websiteModel!=null? Column(
               children: [
                 Padding(
                   padding: const EdgeInsets.only(bottom: 30),
@@ -139,7 +139,78 @@ class _ReserviorSectionState extends State<ReserviorSection> {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 950,
+                  height: 1200,
+                  decoration:  BoxDecoration(
+                      color: AppColors.backGroundColor,
+                      borderRadius: BorderRadiusDirectional.circular(15)
+                  ),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        Text( layoutCubit.websiteModel!.reserviorFirstTitle!.toUpperCase(),
+                          style: GoogleFonts.inter(
+                              textStyle:const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColors.primaryColor
+                              )
+                          ),),
+                        SizedBox(height: 4.h,),
+                        Image.asset(AppImages.reserviorImage),
+                        SizedBox(height: 7.h,),
+                        SizedBox(
+                            width:90.w,
+                            child: ColoredMantaRayWordWidget(text: layoutCubit.websiteModel!.reserviorFirstContent!, fontSize: getResponsiveFontSize(22),)),
+                        SizedBox(height: 7.h,),
+                        Text( layoutCubit.websiteModel!.reserviorSecondTitle!.toUpperCase(),
+                          style: GoogleFonts.inter(
+                              textStyle:const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColors.blackColor
+                              )
+                          ),),
+                        SizedBox(height: 4.h,),
+                        SizedBox(
+                            width:90.w,
+                            child: ColoredMantaRayWordWidget(text:  layoutCubit.websiteModel!.reserviorSecondContent!, fontSize: getResponsiveFontSize(22),)),
+                        SizedBox(height: 7.h,),
+                        Text( layoutCubit.websiteModel!.reserviorThirdTitle!.toUpperCase(),
+                          style: GoogleFonts.inter(
+                              textStyle:const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppColors.blackColor
+                              )
+                          ),),
+                        SizedBox(height: 4.h,),
+                        SizedBox(
+                            width:90.w,
+                            child: ColoredMantaRayWordWidget(text:  layoutCubit.websiteModel!.reserviorThirdContent!, fontSize: getResponsiveFontSize(18),))
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            )
+                :const Center(child: CircularProgressIndicator())
+                :layoutCubit.websiteModel!=null? Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        layoutCubit.websiteModel!.reserviorHeading!.toUpperCase(),
+                        style: TextStyle(
+                            fontSize: getResponsiveFontSize(18).sp,
+                            fontWeight: FontWeight.bold,
+                            color: AppColors.blackColor),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  width: double.infinity,
+                  height: 1460,
                   decoration:  BoxDecoration(
                       color: AppColors.backGroundColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -151,41 +222,38 @@ class _ReserviorSectionState extends State<ReserviorSection> {
                         children: [
                           Text( layoutCubit.websiteModel!.reserviorFirstTitle!.toUpperCase(),
                             style: GoogleFonts.inter(
-                                textStyle:const TextStyle(
+                                textStyle: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: AppColors.primaryColor
+                                    color: AppColors.primaryColor,
+                                    fontSize: getResponsiveFontSize(16).sp
                                 )
                             ),),
                           const SizedBox(height: 25,),
                           Image.asset(AppImages.reserviorImage),
                           const SizedBox(height: 40,),
-                          SizedBox(
-                              width: getResponsiveContainerWidth(90).w,
-                              child: ColoredMantaRayWordWidget(text:  layoutCubit.websiteModel!.reserviorFirstContent!, fontSize: getResponsiveFontSize(26),)),
+                          ColoredMantaRayWordWidget(text:  layoutCubit.websiteModel!.reserviorFirstContent!, fontSize: getResponsiveFontSize(16).sp,),
                           const SizedBox(height: 35,),
                           Text( layoutCubit.websiteModel!.reserviorSecondTitle!.toUpperCase(),
                             style: GoogleFonts.inter(
-                                textStyle:const TextStyle(
+                                textStyle: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: AppColors.blackColor
+                                    color: AppColors.blackColor,
+                                    fontSize: getResponsiveFontSize(14).sp
                                 )
                             ),),
                           const SizedBox(height: 25,),
-                          SizedBox(
-                              width: getResponsiveContainerWidth(90).w,
-                              child: ColoredMantaRayWordWidget(text:  layoutCubit.websiteModel!.reserviorSecondContent!, fontSize: getResponsiveFontSize(26),)),
+                          ColoredMantaRayWordWidget(text:  layoutCubit.websiteModel!.reserviorSecondContent!, fontSize: getResponsiveFontSize(16).sp,),
                           const SizedBox(height: 35,),
                           Text( layoutCubit.websiteModel!.reserviorThirdTitle!.toUpperCase(),
                             style: GoogleFonts.inter(
-                                textStyle:const TextStyle(
+                                textStyle: TextStyle(
                                     fontWeight: FontWeight.bold,
-                                    color: AppColors.blackColor
+                                    color: AppColors.blackColor,
+                                    fontSize: getResponsiveFontSize(14).sp
                                 )
                             ),),
                           const SizedBox(height: 25,),
-                          SizedBox(
-                              width: getResponsiveContainerWidth(90).w,
-                              child: ColoredMantaRayWordWidget(text:  layoutCubit.websiteModel!.reserviorThirdContent!, fontSize: getResponsiveFontSize(26),))
+                          ColoredMantaRayWordWidget(text:  layoutCubit.websiteModel!.reserviorThirdContent!, fontSize: getResponsiveFontSize(16).sp,)
                         ],
                       ),
                     ),

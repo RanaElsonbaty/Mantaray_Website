@@ -78,13 +78,11 @@ class _ConsultationSectionState extends State<ConsultationSection> {
             Container(
               padding: const EdgeInsets.all(12),
               width: double.infinity,
-              height: 1850,
+              height: 1990,
               color: AppColors.backGroundColor,
               child:  Column(
                 children: [
-                  SizedBox(
-                      width: 450,
-                      child: ColoredMantaRayWordWidget(text: 'At Mantaray, we specialize in delivering tailored consultation services designed to foster  growth and innovation within your organization. Our team comprises seasoned consultants  with diverse industry experience, ensuring that we provide customized solutions that  address your specific business challenges and objectives.  Mantaray offers a wide array of geoscience and engineering consulting services. Our  offerings range from highly focused single-well investigations to fully integrated field studies  and field development planning, including project economics and risk assessment. To  ensure consistent, high-quality results, Mantaray applies patented, tightly integrated  workflow processes developed while solving complex problems.', fontSize: getResponsiveFontSize(24),)),
+                  ColoredMantaRayWordWidget(text: 'At Mantaray, we specialize in delivering tailored consultation services designed to foster  growth and innovation within your organization. Our team comprises seasoned consultants  with diverse industry experience, ensuring that we provide customized solutions that  address your specific business challenges and objectives.  Mantaray offers a wide array of geoscience and engineering consulting services. Our  offerings range from highly focused single-well investigations to fully integrated field studies  and field development planning, including project economics and risk assessment. To  ensure consistent, high-quality results, Mantaray applies patented, tightly integrated  workflow processes developed while solving complex problems.', fontSize: getResponsiveFontSize(24),),
                   Padding(
                     padding: const EdgeInsets.only(top:30,bottom: 15),
                     child: Row(
@@ -100,20 +98,18 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                       ],
                     ),
                   ),
-                  SizedBox(
-                    width: 450,
-                    child: Text("• Tailored Solutions: We understand that every organization is unique. That's why we take  the time to listen to your needs and challenges, crafting solutions that are specifically  tailored to meet your requirements.\n• Industry Expertise: Our consultants have a deep understanding of various disciplines in oil  and gas industry as: Exploration, Reservoir Engineering, and Operations. This breadth of  experience allows us to offer insights and strategies that drive success in any sector.\n• Collaborative Partnership: We believe in building strong relationships with our clients  based on trust, transparency, and collaboration. By working closely with your team, we  ensure that our solutions are not only effective but also sustainable in the long run.\n• Continuous Improvement: In a rapidly evolving business landscape, we stay ahead of the  curve by continuously refining our methodologies and embracing the latest trends and  technologies. This ensures that our clients always receive the most innovative and  cutting-edge solutions.",
-                      style: GoogleFonts.inter(
-                          textStyle:TextStyle(
-                              fontWeight: FontWeight.w500,
-                              color: AppColors.primaryColor,
-                              fontSize: getResponsiveFontSize(22)
-                          )
-                      ),),
-                  ),
+                  Text("• Tailored Solutions: We understand that every organization is unique. That's why we take  the time to listen to your needs and challenges, crafting solutions that are specifically  tailored to meet your requirements.\n• Industry Expertise: Our consultants have a deep understanding of various disciplines in oil  and gas industry as: Exploration, Reservoir Engineering, and Operations. This breadth of  experience allows us to offer insights and strategies that drive success in any sector.\n• Collaborative Partnership: We believe in building strong relationships with our clients  based on trust, transparency, and collaboration. By working closely with your team, we  ensure that our solutions are not only effective but also sustainable in the long run.\n• Continuous Improvement: In a rapidly evolving business landscape, we stay ahead of the  curve by continuously refining our methodologies and embracing the latest trends and  technologies. This ensures that our clients always receive the most innovative and  cutting-edge solutions.",
+                    textAlign: TextAlign.justify,
+                    style: GoogleFonts.inter(
+                        textStyle:TextStyle(
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.primaryColor,
+                            fontSize: getResponsiveFontSize(24)
+                        )
+                    ),),
                   const SizedBox(height: 40,),
                   SizedBox(
-                    height: 400,
+                    height: 420,
                     child: GridView.builder(
                       physics: const BouncingScrollPhysics(),
                       itemCount: 4,
@@ -167,7 +163,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
             ),
             Container(
               width: double.infinity,
-              height: 850,
+              height: 870,
               color: AppColors.backGroundColor,
               child:  Column(
                 children: [
@@ -194,9 +190,10 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text("• Tailored Solutions: We understand that every organization is unique. That's why we take  the time to listen to your needs and challenges, crafting solutions that are specifically  tailored to meet your requirements.\n• Industry Expertise: Our consultants have a deep understanding of various disciplines in oil  and gas industry as: Exploration, Reservoir Engineering, and Operations. This breadth of  experience allows us to offer insights and strategies that drive success in any sector.\n• Collaborative Partnership: We believe in building strong relationships with our clients  based on trust, transparency, and collaboration. By working closely with your team, we  ensure that our solutions are not only effective but also sustainable in the long run.\n• Continuous Improvement: In a rapidly evolving business landscape, we stay ahead of the  curve by continuously refining our methodologies and embracing the latest trends and  technologies. This ensures that our clients always receive the most innovative and  cutting-edge solutions.",
+                      textAlign: TextAlign.justify,
                       style: GoogleFonts.inter(
                           textStyle:const TextStyle(
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w600,
                               color: AppColors.primaryColor,
                               fontSize: 18
                           )
@@ -204,7 +201,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   ),
                   const SizedBox(height: 40,),
                   SizedBox(
-                    height: 260,
+                    height: 280,
                     child: GridView.builder(
                       physics: const BouncingScrollPhysics(),
                       itemCount: 4,
@@ -241,7 +238,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   Text(
                     "Consultation".toUpperCase(),
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(36),
+                        fontSize: getResponsiveFontSize(18).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryColor),
                   ),
@@ -256,20 +253,20 @@ class _ConsultationSectionState extends State<ConsultationSection> {
             ),
             Container(
               width: double.infinity,
-              height: 1850,
+              height: 1980,
               color: AppColors.backGroundColor,
               child:  Column(
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(20),
-                    child: ColoredMantaRayWordWidget(text: 'At Mantaray, we specialize in delivering tailored consultation services designed to foster  growth and innovation within your organization. Our team comprises seasoned consultants  with diverse industry experience, ensuring that we provide customized solutions that  address your specific business challenges and objectives.  Mantaray offers a wide array of geoscience and engineering consulting services. Our  offerings range from highly focused single-well investigations to fully integrated field studies  and field development planning, including project economics and risk assessment. To  ensure consistent, high-quality results, Mantaray applies patented, tightly integrated  workflow processes developed while solving complex problems.', fontSize: getResponsiveFontSize(38),),
+                    child: ColoredMantaRayWordWidget(text: 'At Mantaray, we specialize in delivering tailored consultation services designed to foster  growth and innovation within your organization. Our team comprises seasoned consultants  with diverse industry experience, ensuring that we provide customized solutions that  address your specific business challenges and objectives.  Mantaray offers a wide array of geoscience and engineering consulting services. Our  offerings range from highly focused single-well investigations to fully integrated field studies  and field development planning, including project economics and risk assessment. To  ensure consistent, high-quality results, Mantaray applies patented, tightly integrated  workflow processes developed while solving complex problems.', fontSize: getResponsiveFontSize(16).sp,),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text("Our Approach : ",style: GoogleFonts.inter(
                       textStyle: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: getResponsiveFontSize(38),
+                        fontSize: getResponsiveFontSize(16).sp,
                         color: AppColors.blackColor
                       )
                     ),),
@@ -277,17 +274,18 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   Padding(
                     padding: const EdgeInsets.all(20),
                     child: Text("• Tailored Solutions: We understand that every organization is unique. That's why we take  the time to listen to your needs and challenges, crafting solutions that are specifically  tailored to meet your requirements.\n• Industry Expertise: Our consultants have a deep understanding of various disciplines in oil  and gas industry as: Exploration, Reservoir Engineering, and Operations. This breadth of  experience allows us to offer insights and strategies that drive success in any sector.\n• Collaborative Partnership: We believe in building strong relationships with our clients  based on trust, transparency, and collaboration. By working closely with your team, we  ensure that our solutions are not only effective but also sustainable in the long run.\n• Continuous Improvement: In a rapidly evolving business landscape, we stay ahead of the  curve by continuously refining our methodologies and embracing the latest trends and  technologies. This ensures that our clients always receive the most innovative and  cutting-edge solutions.",
+                    textAlign: TextAlign.justify,
                     style: GoogleFonts.inter(
                       textStyle:TextStyle(
                         fontWeight: FontWeight.w600,
                         color: AppColors.primaryColor,
-                        fontSize: getResponsiveFontSize(38)
+                        fontSize: getResponsiveFontSize(16).sp
                       )
                     ),),
                   ),
                   const SizedBox(height: 100,),
                   SizedBox(
-                    height: 560,
+                    height: 600,
                     child: Center(
                       child: GridView.builder(
                         physics: const BouncingScrollPhysics(),

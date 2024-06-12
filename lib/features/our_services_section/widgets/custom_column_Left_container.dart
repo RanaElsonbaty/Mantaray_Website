@@ -27,7 +27,9 @@ class CustomColumnDeskLeftCurved extends StatelessWidget {
                   child: Row(
                      mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(text.toUpperCase(),style: GoogleFonts.inter(
+                      Text(text.toUpperCase(),
+                        textAlign: TextAlign.justify,
+                        style: GoogleFonts.inter(
                         textStyle: TextStyle(
                             color: AppColors.primaryColor,
                             fontWeight: FontWeight.w700,

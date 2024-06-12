@@ -22,7 +22,7 @@ class _ProductionSectionState extends State<ProductionSection> {
       builder: (BuildContext context, BoxConstraints constraints) {
         final screenWidth = constraints.maxWidth;
         final isMobile = screenWidth < 800;
-        final isTablet = screenWidth >= 800 && screenWidth < 1200;
+        final isTablet = screenWidth >= 800 && screenWidth < 1300;
 
         double getResponsiveFontSize(double baseFontSize) {
           if (isMobile) {
@@ -58,7 +58,7 @@ class _ProductionSectionState extends State<ProductionSection> {
                     color: AppColors.blackColor,
                   ),
                   Text(
-                    "Production".toUpperCase(),
+                    "well testing".toUpperCase(),
                     style: TextStyle(
                         fontSize: getResponsiveFontSize(24),
                         fontWeight: FontWeight.bold,
@@ -191,7 +191,7 @@ class _ProductionSectionState extends State<ProductionSection> {
                     color: AppColors.blackColor,
                   ),
                   Text(
-                    "Production".toUpperCase(),
+                    "well testing".toUpperCase(),
                     style: TextStyle(
                         fontSize: getResponsiveFontSize(24),
                         fontWeight: FontWeight.bold,
@@ -323,9 +323,9 @@ class _ProductionSectionState extends State<ProductionSection> {
                     color: AppColors.blackColor,
                   ),
                   Text(
-                    "Production".toUpperCase(),
+                    "well testing".toUpperCase(),
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(24),
+                        fontSize: getResponsiveFontSize(18).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryColor),
                   ),
@@ -341,7 +341,7 @@ class _ProductionSectionState extends State<ProductionSection> {
             Container(
               padding: const EdgeInsets.all(8),
               width: double.infinity,
-              height: 1650,
+              height: 1700,
               decoration:  BoxDecoration(
                   color: AppColors.backGroundColor,
                   borderRadius: BorderRadiusDirectional.circular(15)
@@ -351,34 +351,30 @@ class _ProductionSectionState extends State<ProductionSection> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
-                        width: getResponsiveContainerWidth(2500),
-                        child: Text("Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
-                          // maxLines: 4,
-                          style: GoogleFonts.inter(
-                              textStyle:TextStyle(
-                                  color: AppColors.primaryColor,
-                                  fontSize: getResponsiveFontSize(22)
-                              )
-                          ),)),
+                    Text("Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
+                      textAlign: TextAlign.justify,
+                      style: GoogleFonts.inter(
+                          textStyle:TextStyle(
+                              color: AppColors.primaryColor,
+                              fontSize: getResponsiveFontSize(16).sp
+                          )
+                      ),),
                     const SizedBox(height: 20,),
                     Text(
                       "Testing:",
                       style: TextStyle(
-                          fontSize: getResponsiveFontSize(24),
+                          fontSize: getResponsiveFontSize(18).sp,
                           fontWeight: FontWeight.bold,
                           color: AppColors.blackColor),
                     ),
-                    SizedBox(
-                        width: getResponsiveContainerWidth(2500),
-                        child: Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
-                          // maxLines: 4,
-                          style: GoogleFonts.inter(
-                              textStyle:TextStyle(
-                                  color: AppColors.primaryColor,
-                                  fontSize: getResponsiveFontSize(22)
-                              )
-                          ),)),
+                    Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
+                      textAlign: TextAlign.justify,
+                      style: GoogleFonts.inter(
+                          textStyle:TextStyle(
+                              color: AppColors.primaryColor,
+                              fontSize: getResponsiveFontSize(16).sp
+                          )
+                      ),),
                     const SizedBox(height: 20,),
                     const Divider(
                       thickness: 1,
@@ -408,20 +404,18 @@ class _ProductionSectionState extends State<ProductionSection> {
                     Text(
                       "Enhanced Oil Recovery - EOR:",
                       style: TextStyle(
-                          fontSize: getResponsiveFontSize(24),
+                          fontSize: getResponsiveFontSize(18).sp,
                           fontWeight: FontWeight.bold,
                           color: AppColors.blackColor),
                     ),
-                    SizedBox(
-                        width: getResponsiveContainerWidth(2500),
-                        child: Text("Mantaray provides advanced polymer technologies to improve the performance and  economics of Oil & Gas extraction operations.  Our solutions are designed to meet or exceed  the needs of our customers in the Oil & Gas industry.  In all Oil & Gas applications, Mantaray offers tailored polymers and equipment solutions  from conceptual lab studies through to full-field operations.  Our support services include:",
-                          // maxLines: 4,
-                          style: GoogleFonts.inter(
-                              textStyle:TextStyle(
-                                  color: AppColors.primaryColor,
-                                  fontSize: getResponsiveFontSize(22)
-                              )
-                          ),)),
+                    Text("Mantaray provides advanced polymer technologies to improve the performance and  economics of Oil & Gas extraction operations.  Our solutions are designed to meet or exceed  the needs of our customers in the Oil & Gas industry.  In all Oil & Gas applications, Mantaray offers tailored polymers and equipment solutions  from conceptual lab studies through to full-field operations.  Our support services include:",
+                      textAlign: TextAlign.justify,
+                        style: GoogleFonts.inter(
+                          textStyle:TextStyle(
+                              color: AppColors.primaryColor,
+                              fontSize: getResponsiveFontSize(16).sp
+                          )
+                      ),),
                     const SizedBox(height: 20,),
                     const Divider(
                       thickness: 1,

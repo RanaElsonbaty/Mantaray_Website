@@ -124,7 +124,7 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                       Text(
                         layoutCubit.websiteModel!.servicesHeading!.toUpperCase(),
                         style: TextStyle(
-                            fontSize: getResponsiveFontSize(24),
+                            fontSize: getResponsiveFontSize(18).sp,
                             fontWeight: FontWeight.bold,
                             color: AppColors.primaryColor),
                       ),
@@ -140,7 +140,7 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                 Container(
                   padding: const EdgeInsets.only(top: 90),
                   width: double.infinity,
-                  height: 1600,
+                  height: 1700,
                   decoration:  BoxDecoration(
                       color: AppColors.backGroundColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -149,23 +149,23 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                     children: [
                       const SizedBox(height: 50,),
                       CustomColumnDeskLeftCurved(
-                        fontSize:  getResponsiveFontSize(24),
-                        text: layoutCubit.websiteModel!.servicesProductionTitle!, width: getResponsiveContainerWidth(60).w, content: layoutCubit.websiteModel!.servicesProductionContent!, url: AppImages.leftCurvedLine, fontSizContent: getResponsiveFontSize(26), number: '1', image: AppImages.productionImage,
+                        fontSize:  getResponsiveFontSize(16).sp,
+                        text: layoutCubit.websiteModel!.servicesProductionTitle!, width: getResponsiveContainerWidth(60).w, content: layoutCubit.websiteModel!.servicesProductionContent!, url: AppImages.leftCurvedLine, fontSizContent: getResponsiveFontSize(14).sp, number: '1', image: AppImages.productionImage,
                       ),
                       const SizedBox(height: 60,),
                       CustomColumnDeskRightCurved(
-                        fontSize:  getResponsiveFontSize(24),
-                        text: layoutCubit.websiteModel!.servicesApplicationsTitle!, width: getResponsiveContainerWidth(60).w, content: layoutCubit.websiteModel!.servicesApplicationsContent!, url: AppImages.rightCurvedLine, fontSizContent: getResponsiveFontSize(26), number: '2', image: AppImages.applicationImage,
+                        fontSize:  getResponsiveFontSize(16).sp,
+                        text: layoutCubit.websiteModel!.servicesApplicationsTitle!, width: getResponsiveContainerWidth(60).w, content: layoutCubit.websiteModel!.servicesApplicationsContent!, url: AppImages.rightCurvedLine, fontSizContent: getResponsiveFontSize(14).sp, number: '2', image: AppImages.applicationImage,
                       ),
                       const SizedBox(height: 60,),
                       CustomColumnDeskLeftCurved(
-                        fontSize:  getResponsiveFontSize(24),
-                        text: layoutCubit.websiteModel!.servicesSoftwareTitle!, width: getResponsiveContainerWidth(60).w, content: layoutCubit.websiteModel!.servicesSoftwareContent!, url: AppImages.leftCurvedLine, fontSizContent: getResponsiveFontSize(26), number: '3', image: AppImages.softwareImage,
+                        fontSize:  getResponsiveFontSize(16).sp,
+                        text: layoutCubit.websiteModel!.servicesSoftwareTitle!, width: getResponsiveContainerWidth(60).w, content: layoutCubit.websiteModel!.servicesSoftwareContent!, url: AppImages.leftCurvedLine, fontSizContent: getResponsiveFontSize(14).sp, number: '3', image: AppImages.softwareImage,
                       ),
                       const SizedBox(height: 60,),
                       CustomColumnDeskRightCurved(
-                        fontSize:  getResponsiveFontSize(24),
-                        text: layoutCubit.websiteModel!.servicesConsultationTitle!, width: getResponsiveContainerWidth(60).w, content: layoutCubit.websiteModel!.servicesConsultationContent!, url: AppImages.rightCurvedLine, fontSizContent: getResponsiveFontSize(26), number: '4', image: AppImages.consultationImage,
+                        fontSize:  getResponsiveFontSize(16).sp,
+                        text: layoutCubit.websiteModel!.servicesConsultationTitle!, width: getResponsiveContainerWidth(60).w, content: layoutCubit.websiteModel!.servicesConsultationContent!, url: AppImages.rightCurvedLine, fontSizContent: getResponsiveFontSize(14).sp, number: '4', image: AppImages.consultationImage,
                       ),
                     ],
                   ),

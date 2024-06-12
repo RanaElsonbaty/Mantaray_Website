@@ -21,7 +21,7 @@ class ColoredMantaRayWordWidget extends StatelessWidget {
           text: text.substring(lastMatchEnd, match.start),
           style: GoogleFonts.inter(
             textStyle: TextStyle(
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w600,
               color: AppColors.primaryColor,
               fontSize: fontSize,
             ),
@@ -46,7 +46,7 @@ class ColoredMantaRayWordWidget extends StatelessWidget {
         text: text.substring(lastMatchEnd),
         style: GoogleFonts.inter(
           textStyle: TextStyle(
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w600,
             color: AppColors.primaryColor,
             fontSize: fontSize,
           ),
@@ -60,6 +60,7 @@ class ColoredMantaRayWordWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
+      textAlign: TextAlign.justify,
       text: highlightMANTARAY(text, fontSize),
     );
   }

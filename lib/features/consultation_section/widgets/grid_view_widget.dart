@@ -13,7 +13,7 @@ class GridViewWidget extends StatelessWidget {
     return  Container(
       color: consultList[index].color,
       child:  Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(20),
         child: Center(
           child: Column(
             children: [
@@ -25,7 +25,9 @@ class GridViewWidget extends StatelessWidget {
                 )
               ),),
               const SizedBox(height: 12,),
-              Text(consultList[index].content,style: GoogleFonts.inter(
+              Text(consultList[index].content,
+                  textAlign: TextAlign.justify,
+                  style: GoogleFonts.inter(
                   textStyle: TextStyle(
                     fontSize: size,
                       color: AppColors.whiteColor
