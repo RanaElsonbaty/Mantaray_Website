@@ -131,7 +131,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                       Text(
                         layoutCubit.websiteModel!.softwareHeading!.toUpperCase(),
                         style: TextStyle(
-                            fontSize: getResponsiveFontSize(24),
+                            fontSize: getResponsiveFontSize(18).sp,
                             fontWeight: FontWeight.bold,
                             color: AppColors.primaryColor),
                       ),

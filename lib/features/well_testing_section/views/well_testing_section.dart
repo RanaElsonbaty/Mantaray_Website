@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mantaray_website/core/utils/app_colors.dart';
-import 'package:mantaray_website/features/production_section/data/model/product_model.dart';
-import 'package:mantaray_website/features/production_section/widgets/product_second_widget.dart';
-import 'package:mantaray_website/features/production_section/widgets/product_widget.dart';
+import 'package:mantaray_website/features/well_testing_section/data/model/product_model.dart';
+import 'package:mantaray_website/features/well_testing_section/widgets/product_widget.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-class ProductionSection extends StatefulWidget {
-  const ProductionSection({super.key});
+class WellTestingSection extends StatefulWidget {
+  const WellTestingSection({super.key});
 
   @override
-  State<ProductionSection> createState() => _ProductionSectionState();
+  State<WellTestingSection> createState() => _WellTestingSectionState();
 }
 
-class _ProductionSectionState extends State<ProductionSection> {
+class _WellTestingSectionState extends State<WellTestingSection> {
 
   @override
   Widget build(BuildContext context) {
 
     return LayoutBuilder(
       builder: (BuildContext context, BoxConstraints constraints) {
-        final screenWidth = constraints.maxWidth;
-        final isMobile = screenWidth < 800;
-        final isTablet = screenWidth >= 800 && screenWidth < 1300;
+        final screenWidth = MediaQuery.of(context).size.width;
+        final isMobile = screenWidth < 960;
+        final isTablet = screenWidth >= 960 && screenWidth < 1900;
 
         double getResponsiveFontSize(double baseFontSize) {
           if (isMobile) {
@@ -76,7 +75,7 @@ class _ProductionSectionState extends State<ProductionSection> {
             Container(
               padding: const EdgeInsets.all(8),
               width: double.infinity,
-              height: 1650,
+              height: 820,
               decoration:  BoxDecoration(
                   color: AppColors.backGroundColor,
                   borderRadius: BorderRadiusDirectional.circular(15)
@@ -84,16 +83,14 @@ class _ProductionSectionState extends State<ProductionSection> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                      width:90.w,
-                      child: Text("Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
-                        maxLines: 5,
-                        style: GoogleFonts.inter(
-                            textStyle:TextStyle(
-                                color: AppColors.primaryColor,
-                                fontSize: getResponsiveFontSize(22)
-                            )
-                        ),)),
+                  Text("Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
+                    textAlign: TextAlign.justify,
+                    style: GoogleFonts.inter(
+                        textStyle:TextStyle(
+                            color: AppColors.primaryColor,
+                            fontSize: getResponsiveFontSize(22)
+                        )
+                    ),),
                   const SizedBox(height: 20,),
                   Text(
                     "Testing:",
@@ -102,23 +99,15 @@ class _ProductionSectionState extends State<ProductionSection> {
                         fontWeight: FontWeight.bold,
                         color: AppColors.blackColor),
                   ),
-                  SizedBox(
-                      width:90.w,
-                      child: Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
-                        maxLines: 5,
-                        style: GoogleFonts.inter(
-                            textStyle:TextStyle(
-                                color: AppColors.primaryColor,
-                                fontSize: getResponsiveFontSize(22)
-                            )
-                        ),)),
-                  const SizedBox(height: 25,),
-                  const Divider(
-                    thickness: 1,
-                    indent: 80,
-                    endIndent: 80,
-                    color: AppColors.blackColor,
-                  ),
+                  Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
+                    textAlign: TextAlign.justify,
+                    style: GoogleFonts.inter(
+                        textStyle:TextStyle(
+                            color: AppColors.primaryColor,
+                            fontSize: getResponsiveFontSize(22)
+                        )
+                    ),),
+                  const SizedBox(height: 50,),
                   Expanded(
                       child: ListView.separated(
                         shrinkWrap: true,
@@ -126,45 +115,7 @@ class _ProductionSectionState extends State<ProductionSection> {
                         itemCount: productsTop.length,
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
-                          return ProductWidget(index: index,);
-                        }, separatorBuilder: (BuildContext context, int index) {
-                        return SizedBox(width: 12.w,);
-                      },
-                      )
-                  ),
-                  Text(
-                    "Enhanced Oil Recovery - EOR:",
-                    style: TextStyle(
-                        fontSize: getResponsiveFontSize(24),
-                        fontWeight: FontWeight.bold,
-                        color: AppColors.blackColor),
-                  ),
-                  SizedBox(
-                      width:90.w,
-                      child: Text("Mantaray provides advanced polymer technologies to improve the performance and  economics of Oil & Gas extraction operations.  Our solutions are designed to meet or exceed  the needs of our customers in the Oil & Gas industry.  In all Oil & Gas applications, Mantaray offers tailored polymers and equipment solutions  from conceptual lab studies through to full-field operations.  Our support services include:",
-                        maxLines: 10,
-                        style: GoogleFonts.inter(
-                            textStyle:TextStyle(
-                                color: AppColors.primaryColor,
-                                fontSize: getResponsiveFontSize(22)
-                            )
-                        ),)),
-
-                  const SizedBox(height: 25,),
-                  const Divider(
-                    thickness: 1,
-                    indent: 80,
-                    endIndent: 80,
-                    color: AppColors.blackColor,
-                  ),
-                  Expanded(
-                      child: ListView.separated(
-                        shrinkWrap: true,
-                        physics: const BouncingScrollPhysics(),
-                        itemCount: productsBottom.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return ProductBottomWidget(index: index,);
+                          return ProductWidget(index: index, titleFontSize: 20, containerHeight: 350, containerWidth: 230, imageHeight: 150, imageWidth: 230, descriptionFontSize: 18, moreFontSize: 18, showSize: 14,);
                         }, separatorBuilder: (BuildContext context, int index) {
                         return SizedBox(width: 12.w,);
                       },
@@ -193,7 +144,7 @@ class _ProductionSectionState extends State<ProductionSection> {
                   Text(
                     "well testing".toUpperCase(),
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(24),
+                        fontSize: getResponsiveFontSize(18).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryColor),
                   ),
@@ -209,7 +160,7 @@ class _ProductionSectionState extends State<ProductionSection> {
             Container(
               padding: const EdgeInsets.all(8),
               width: double.infinity,
-              height: 1700,
+              height: 650,
               decoration:  BoxDecoration(
                   color: AppColors.backGroundColor,
                   borderRadius: BorderRadiusDirectional.circular(15)
@@ -245,13 +196,7 @@ class _ProductionSectionState extends State<ProductionSection> {
                                 fontSize: getResponsiveFontSize(22)
                             )
                         ),)),
-                  const SizedBox(height: 25,),
-                  const Divider(
-                    thickness: 1,
-                    indent: 400,
-                    endIndent: 400,
-                    color: AppColors.blackColor,
-                  ),
+                  const SizedBox(height: 50,),
                   Expanded(
                       child: ListView.separated(
                         shrinkWrap: true,
@@ -259,45 +204,7 @@ class _ProductionSectionState extends State<ProductionSection> {
                         itemCount: productsTop.length,
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
-                          return ProductWidget(index: index,);
-                        }, separatorBuilder: (BuildContext context, int index) {
-                        return SizedBox(width: 12.w,);
-                      },
-                      )
-                  ),
-                  const SizedBox(height: 20,),
-                  Text(
-                    "Enhanced Oil Recovery - EOR:",
-                    style: TextStyle(
-                        fontSize: getResponsiveFontSize(24),
-                        fontWeight: FontWeight.bold,
-                        color: AppColors.blackColor),
-                  ),
-                  SizedBox(
-                     // width: getResponsiveContainerWidth(700),
-                      child: Text("Mantaray provides advanced polymer technologies to improve the performance and  economics of Oil & Gas extraction operations.  Our solutions are designed to meet or exceed  the needs of our customers in the Oil & Gas industry.  In all Oil & Gas applications, Mantaray offers tailored polymers and equipment solutions  from conceptual lab studies through to full-field operations.  Our support services include:",
-                        // maxLines: 4,
-                        style: GoogleFonts.inter(
-                            textStyle:TextStyle(
-                                color: AppColors.primaryColor,
-                                fontSize: getResponsiveFontSize(22)
-                            )
-                        ),)),
-                  const SizedBox(height: 25,),
-                  const Divider(
-                    thickness: 1,
-                    indent: 400,
-                    endIndent: 400,
-                    color: AppColors.blackColor,
-                  ),
-                  Expanded(
-                      child: ListView.separated(
-                        shrinkWrap: true,
-                        physics: const BouncingScrollPhysics(),
-                        itemCount: productsBottom.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return ProductBottomWidget(index: index,);
+                          return ProductWidget(index: index, titleFontSize: 20, containerHeight: 350, containerWidth: 230, imageHeight: 150, imageWidth: 230, descriptionFontSize: 18, moreFontSize: 18, showSize: 14,);
                         }, separatorBuilder: (BuildContext context, int index) {
                         return SizedBox(width: 12.w,);
                       },
@@ -341,7 +248,7 @@ class _ProductionSectionState extends State<ProductionSection> {
             Container(
               padding: const EdgeInsets.all(8),
               width: double.infinity,
-              height: 1700,
+              height: 1550,
               decoration:  BoxDecoration(
                   color: AppColors.backGroundColor,
                   borderRadius: BorderRadiusDirectional.circular(15)
@@ -375,70 +282,18 @@ class _ProductionSectionState extends State<ProductionSection> {
                               fontSize: getResponsiveFontSize(16).sp
                           )
                       ),),
-                    const SizedBox(height: 20,),
-                    const Divider(
-                      thickness: 1,
-                      indent: 400,
-                      endIndent: 400,
-                      color: AppColors.blackColor,
-                    ),
+                    const SizedBox(height: 100,),
                     Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ListView.separated(
-                              shrinkWrap: true,
-                              physics: const BouncingScrollPhysics(),
-                              itemCount: productsTop.length,
-                              scrollDirection: Axis.horizontal,
-                              itemBuilder: (context, index) {
-                                return ProductWidget(index: index,);
-                              }, separatorBuilder: (BuildContext context, int index) {
-                              return SizedBox(width: 12.w,);
-                            },
-                            ),
-                          ],
-                        )
-                    ),
-                    const SizedBox(height: 20,),
-                    Text(
-                      "Enhanced Oil Recovery - EOR:",
-                      style: TextStyle(
-                          fontSize: getResponsiveFontSize(18).sp,
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.blackColor),
-                    ),
-                    Text("Mantaray provides advanced polymer technologies to improve the performance and  economics of Oil & Gas extraction operations.  Our solutions are designed to meet or exceed  the needs of our customers in the Oil & Gas industry.  In all Oil & Gas applications, Mantaray offers tailored polymers and equipment solutions  from conceptual lab studies through to full-field operations.  Our support services include:",
-                      textAlign: TextAlign.justify,
-                        style: GoogleFonts.inter(
-                          textStyle:TextStyle(
-                              color: AppColors.primaryColor,
-                              fontSize: getResponsiveFontSize(16).sp
-                          )
-                      ),),
-                    const SizedBox(height: 20,),
-                    const Divider(
-                      thickness: 1,
-                      indent: 400,
-                      endIndent: 400,
-                      color: AppColors.blackColor,
-                    ),
-                    Expanded(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            ListView.separated(
-                              shrinkWrap: true,
-                              physics: const BouncingScrollPhysics(),
-                              itemCount: productsBottom.length,
-                              scrollDirection: Axis.horizontal,
-                              itemBuilder: (context, index) {
-                                return ProductBottomWidget(index: index,);
-                              }, separatorBuilder: (BuildContext context, int index) {
-                              return SizedBox(width: 12.w,);
-                            },
-                            ),
-                          ],
+                        child: ListView.separated(
+                          shrinkWrap: true,
+                          physics: const BouncingScrollPhysics(),
+                          itemCount: productsTop.length,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return ProductWidget(index: index, titleFontSize: getResponsiveFontSize(18).sp, containerHeight: 750, containerWidth: 550, imageHeight:350, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
+                          }, separatorBuilder: (BuildContext context, int index) {
+                          return SizedBox(width: 12.w,);
+                        },
                         )
                     ),
                   ],

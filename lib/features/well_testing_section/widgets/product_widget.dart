@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mantaray_website/core/utils/app_colors.dart';
-import 'package:mantaray_website/features/production_section/data/model/product_model.dart';
+import 'package:mantaray_website/features/well_testing_section/data/model/product_model.dart';
 
 class ProductWidget extends StatefulWidget {
-  const ProductWidget({super.key, required this.index});
+  const ProductWidget({super.key, required this.index, required this.titleFontSize, required this.containerHeight, required this.containerWidth, required this.imageHeight, required this.imageWidth, required this.descriptionFontSize, required this.moreFontSize, required this.showSize});
 
   final int index;
+  final double titleFontSize;
+  final double containerHeight;
+  final double containerWidth;
+  final double imageHeight;
+  final double imageWidth;
+  final double descriptionFontSize;
+  final double moreFontSize;
+  final double showSize;
 
   @override
   State<ProductWidget> createState() => _ProductWidgetState();
@@ -22,8 +30,8 @@ class _ProductWidgetState extends State<ProductWidget> {
         Text(
           productsTop[widget.index].title,
           style: GoogleFonts.inter(
-            textStyle: const TextStyle(
-              fontSize: 20,
+            textStyle:  TextStyle(
+              fontSize: widget.titleFontSize,
               fontWeight: FontWeight.w700,
               color: AppColors.blackColor,
             ),
@@ -31,8 +39,8 @@ class _ProductWidgetState extends State<ProductWidget> {
         ),
         const SizedBox(height: 20),
         Container(
-          width: 230,
-          height: 350, // Adjusted height to accommodate more text
+          width: widget.containerWidth,
+          height: widget.containerHeight, // Adjusted height to accommodate more text
           decoration: BoxDecoration(
             color:click==false? AppColors.primaryColor:AppColors.secondaryColor,
             borderRadius: BorderRadius.circular(14),
@@ -41,18 +49,19 @@ class _ProductWidgetState extends State<ProductWidget> {
             children: [
               Image.asset(
                 productsTop[widget.index].image,
-                height: 150,
-                width: 230,
+                height: widget.imageHeight,
+                width: widget.imageWidth,
                 fit: BoxFit.fill,
               ),
-              SizedBox(
-                width: 220,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
                 child: Text(
                   productsTop[widget.index].description,
+                  textAlign: TextAlign.justify,
                   style: GoogleFonts.inter(
-                    textStyle: const TextStyle(
+                    textStyle:  TextStyle(
                       fontWeight: FontWeight.w400,
-                      fontSize: 18,
+                      fontSize: widget.descriptionFontSize,
                       color: AppColors.whiteColor,
                     ),
                   ),
@@ -71,9 +80,10 @@ class _ProductWidgetState extends State<ProductWidget> {
                     child: Text(
                       "SHOW MORE",
                       style: GoogleFonts.inter(
-                        textStyle: const TextStyle(
+                        textStyle:   TextStyle(
                           fontWeight: FontWeight.bold,
                           color: AppColors.blackColor,
+                          fontSize: widget.showSize
                         ),
                       ),
                     ),
@@ -97,9 +107,12 @@ class _ProductWidgetState extends State<ProductWidget> {
             padding: const EdgeInsets.all(18),
             child: Column(
               children: [
-                Text(productsTop[widget.index].more,style: GoogleFonts.inter(
-                  textStyle:const TextStyle(
-                    color: AppColors.whiteColor
+                Text(productsTop[widget.index].more,
+                  textAlign: TextAlign.justify,
+                  style: GoogleFonts.inter(
+                  textStyle: TextStyle(
+                    color: AppColors.whiteColor,
+                    fontSize: widget.moreFontSize
                   )
                 ),),
                 const Spacer(),
@@ -115,8 +128,9 @@ class _ProductWidgetState extends State<ProductWidget> {
                       child: Text(
                         "SHOW LESS",
                         style: GoogleFonts.inter(
-                          textStyle: const TextStyle(
+                          textStyle:  TextStyle(
                             fontWeight: FontWeight.bold,
+                            fontSize: widget.showSize,
                             color: AppColors.blackColor,
                           ),
                         ),

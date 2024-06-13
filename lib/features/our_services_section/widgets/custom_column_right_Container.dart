@@ -62,7 +62,7 @@ class CustomColumnDeskRightCurved extends StatelessWidget {
                             borderRadius: BorderRadiusDirectional.circular(50),
                             border: Border.all(color: AppColors.blackColor)
                         ),
-                        child:  Center(child: Text(number)),
+                        child:  Center(child: Text(number,style: const TextStyle(fontWeight: FontWeight.bold),)),
                       ),
                       Image.asset(url, height: 220,),
                     ],

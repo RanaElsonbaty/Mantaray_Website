@@ -4,13 +4,13 @@ import 'package:mantaray_website/core/utils/app_images.dart';
 import 'package:mantaray_website/features/about_us_section/views/about_us_section.dart';
 import 'package:mantaray_website/features/consultation_section/views/consultation_section.dart';
 import 'package:mantaray_website/features/contact_us_section/views/contact_us_section.dart';
+import 'package:mantaray_website/features/eor_section/views/eor_section.dart';
 import 'package:mantaray_website/features/home/data/widgets/home_body_screen.dart';
 import 'package:mantaray_website/features/home_section/views/home_section.dart';
-import 'package:mantaray_website/features/our_partners_section/views/our_partners_section.dart';
 import 'package:mantaray_website/features/our_services_section/views/our_services_section.dart';
-import 'package:mantaray_website/features/production_section/views/production_section.dart';
 import 'package:mantaray_website/features/reservior_section/views/reservior_section.dart';
 import 'package:mantaray_website/features/software_section/views/software_section.dart';
+import 'package:mantaray_website/features/well_testing_section/views/well_testing_section.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -25,10 +25,10 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _homeKey = GlobalKey();
   final GlobalKey _aboutUsKey = GlobalKey();
   final GlobalKey _ourServicesKey = GlobalKey();
-  final GlobalKey _productionKey = GlobalKey();
+  final GlobalKey _wellTestingKey = GlobalKey();
   final GlobalKey _softwareKey = GlobalKey();
   final GlobalKey _consultationKey = GlobalKey();
-  final GlobalKey _ourPartnersKey = GlobalKey();
+  final GlobalKey _eorKey = GlobalKey();
   final GlobalKey _contactUsKey = GlobalKey();
 
 
@@ -67,12 +67,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ? null
                 : [
               buildTextButton(label: 'Home', key: _homeKey, ),
-              buildTextButton(label: 'About Us', key: _aboutUsKey, ),
               buildTextButton(label: 'Our Services', key: _ourServicesKey, ),
-              buildTextButton(label: 'Production', key: _productionKey, ),
+              buildTextButton(label: 'Well Testing', key: _wellTestingKey, ),
+              buildTextButton(label: 'EOR', key: _eorKey, ),
               buildTextButton(label: 'Software', key: _softwareKey, ),
               buildTextButton(label: 'Consultation', key: _consultationKey, ),
-              buildTextButton(label: 'Our Partners', key: _ourPartnersKey, ),
+              buildTextButton(label: 'About Us', key: _aboutUsKey, ),
               buildTextButton(label: 'Contact Us', key: _contactUsKey, ),
             ],
           ),
@@ -92,13 +92,13 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: buildTextButtonMobileAndTablet(label: 'Home', key: _homeKey, context: context,),
                 ),
                 ListTile(
-                  title: buildTextButtonMobileAndTablet(label: 'About Us', key: _aboutUsKey, context: context,),
-                ),
-                ListTile(
                   title: buildTextButtonMobileAndTablet(label: 'Our Services', key: _ourServicesKey, context: context,),
                 ),
                 ListTile(
-                  title: buildTextButtonMobileAndTablet(label: 'Production', key: _productionKey, context: context,),
+                  title: buildTextButtonMobileAndTablet(label: 'Well Testing', key: _wellTestingKey, context: context,),
+                ),
+                ListTile(
+                  title: buildTextButtonMobileAndTablet(label: 'EOR', key: _eorKey, context: context,),
                 ),
                 ListTile(
                   title: buildTextButtonMobileAndTablet(label: 'Software', key: _softwareKey, context: context,),
@@ -107,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   title: buildTextButtonMobileAndTablet(label: 'Consultation', key: _consultationKey, context: context,),
                 ),
                 ListTile(
-                  title: buildTextButtonMobileAndTablet(label: 'Our Partners', key: _ourPartnersKey, context: context,),
+                  title: buildTextButtonMobileAndTablet(label: 'About Us', key: _aboutUsKey, context: context,),
                 ),
                 ListTile(
                   title: buildTextButtonMobileAndTablet(label: 'Contact Us', key: _contactUsKey, context: context,),
@@ -122,14 +122,13 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 buildSection(key: _homeKey,widget: const HomeSection(), height: 450, color: AppColors.whiteColor),
-                buildSection(key: _aboutUsKey, widget: const AboutUsSection(), height:isTablet?900: isMobile?850:1200, color:  AppColors.whiteColor),
-                buildSection(key: _ourServicesKey, widget: const OurServicesSection(), height:isMobile? 2250:1950, color:  AppColors.whiteColor),
-                buildSection(key: _productionKey, widget: const ProductionSection(), height: 1830, color: AppColors.whiteColor),
+                buildSection(key: _ourServicesKey, widget: const OurServicesSection(), height:isMobile? 2250:isTablet?1600:2050, color:  AppColors.whiteColor),
+                buildSection(key: _wellTestingKey, widget: const WellTestingSection(), height:isMobile?900:isTablet?750: 1700, color: AppColors.whiteColor),
+                buildSection(key: _eorKey, widget: const EorSection(), height:isMobile?820:isTablet?700: 1550, color: AppColors.whiteColor),
                 buildSection(key: _softwareKey, widget: const SoftwareSection(), height:isMobile?520:isTablet?900:940, color:  AppColors.whiteColor),
-                buildSection(key: _consultationKey, widget:const ConsultationSection(), height:isMobile? 2100:isTablet?1025 :2220, color:  AppColors.whiteColor),
-                const SizedBox(height:15 ,),
+                buildSection(key: _consultationKey, widget:const ConsultationSection(), height:isMobile? 2100:isTablet?1050 :2220, color:  AppColors.whiteColor),
                 const ReserviorSection(),
-                buildSection(key: _ourPartnersKey, widget: const OurPartnersSection(), height: 200, color: AppColors.primaryColor),
+                buildSection(key: _aboutUsKey, widget: const AboutUsSection(), height:isTablet?900: isMobile?850:1200, color:  AppColors.whiteColor),
                 buildSection(key: _contactUsKey, widget:const ContactUsSection(), height: 70, color:  AppColors.whiteColor),
               ],
             ),

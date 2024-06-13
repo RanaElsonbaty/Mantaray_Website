@@ -59,6 +59,7 @@ class HighlightedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RichText(
+      textAlign: TextAlign.justify,
       text: highlightMANTARAY(text, fontSize),
     );
   }

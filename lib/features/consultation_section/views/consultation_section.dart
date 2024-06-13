@@ -148,7 +148,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   Text(
                     "Consultation".toUpperCase(),
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(24),
+                        fontSize: getResponsiveFontSize(18).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryColor),
                   ),
@@ -163,7 +163,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
             ),
             Container(
               width: double.infinity,
-              height: 870,
+              height: 920,
               color: AppColors.backGroundColor,
               child:  Column(
                 children: [
@@ -253,7 +253,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
             ),
             Container(
               width: double.infinity,
-              height: 1980,
+              height: 2100,
               color: AppColors.backGroundColor,
               child:  Column(
                 children: [
@@ -285,7 +285,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   ),
                   const SizedBox(height: 100,),
                   SizedBox(
-                    height: 600,
+                    height:600,
                     child: Center(
                       child: GridView.builder(
                         physics: const BouncingScrollPhysics(),
