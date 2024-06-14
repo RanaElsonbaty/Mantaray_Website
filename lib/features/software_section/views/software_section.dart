@@ -238,7 +238,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                                 textStyle:TextStyle(
                                     color: AppColors.blackColor,
                                     fontWeight: FontWeight.w700,
-                                    fontSize: getResponsiveFontSize(18).sp
+                                    fontSize: getResponsiveFontSize(16).sp
                                 )
                             ),),
                         )

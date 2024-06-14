@@ -260,7 +260,7 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                         ),
                         const SizedBox(height: 60,),
                         Container(
-                          margin: const EdgeInsets.all(20),
+                          // margin: const EdgeInsets.all(20),
                           padding: const EdgeInsets.all(20),
                           height: containerHeight, // Dynamic container height
                           decoration: BoxDecoration(

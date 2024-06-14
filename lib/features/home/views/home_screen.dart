@@ -53,14 +53,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   borderRadius: const BorderRadius.only(bottomLeft: Radius.circular(20),bottomRight: Radius.circular(20))
               ),
             ),
-            toolbarHeight: isMobile?95:140,
+            toolbarHeight: isMobile?95:isTablet?140:200,
             centerTitle:isMobile? true:false,
             title: isMobile?GestureDetector(
                 onTap: refreshPage,
                 child: Image.asset(AppImages.appLogo,height: 120,width: 120,))
                 :GestureDetector(
                 onTap: refreshPage,
-                child: Image.asset(AppImages.appLogo,height: 185,width: 220,)),
+                child: Image.asset(AppImages.appLogo,height: isTablet?160:250,width:isTablet?180: 250,)),
             backgroundColor: Colors.transparent,
             elevation: 0,
             actions: isMobile
@@ -122,11 +122,11 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 buildSection(key: _homeKey,widget: const HomeSection(), height: 450, color: AppColors.whiteColor),
-                buildSection(key: _ourServicesKey, widget: const OurServicesSection(), height:isMobile? 2250:isTablet?1600:2050, color:  AppColors.whiteColor),
+                buildSection(key: _ourServicesKey, widget: const OurServicesSection(), height:isMobile? 2250:isTablet?1900:2350, color:  AppColors.whiteColor),
                 buildSection(key: _wellTestingKey, widget: const WellTestingSection(), height:isMobile?900:isTablet?750: 1700, color: AppColors.whiteColor),
                 buildSection(key: _eorKey, widget: const EorSection(), height:isMobile?820:isTablet?700: 1550, color: AppColors.whiteColor),
                 buildSection(key: _softwareKey, widget: const SoftwareSection(), height:isMobile?520:isTablet?970:970, color:  AppColors.whiteColor),
-                buildSection(key: _consultationKey, widget:const ConsultationSection(), height:isMobile? 2100:isTablet?1050 :2280, color:  AppColors.whiteColor),
+                buildSection(key: _consultationKey, widget:const ConsultationSection(), height:isMobile? 2100:isTablet?1050 :2380, color:  AppColors.whiteColor),
                 const ReserviorSection(),
                 buildSection(key: _aboutUsKey, widget: const AboutUsSection(), height:isTablet?900: isMobile?850:1200, color:  AppColors.whiteColor),
                 buildSection(key: _contactUsKey, widget:const ContactUsSection(), height: isMobile?300:isTablet?400:900, color:  AppColors.blackColor),

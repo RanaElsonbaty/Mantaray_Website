@@ -140,7 +140,7 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                 Container(
                   padding: const EdgeInsets.only(top: 90),
                   width: double.infinity,
-                  height: 1500,
+                  height: 1800,
                   decoration:  BoxDecoration(
                       color: AppColors.backGroundColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -176,7 +176,7 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                 :layoutCubit.websiteModel!=null? Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 30),
+                  padding: const EdgeInsets.only(top: 50,bottom: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -204,9 +204,9 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                   ),
                 ),
                 Container(
-                  padding: const EdgeInsets.only(top: 90),
+                  padding: const EdgeInsets.only(top: 80,left: 20,right: 20),
                   width: double.infinity,
-                  height: 1900,
+                  height: 2100,
                   decoration:  BoxDecoration(
                       color: AppColors.backGroundColor,
                       borderRadius: BorderRadiusDirectional.circular(15)

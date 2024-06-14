@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mantaray_website/core/utils/app_colors.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 Widget buildSection({required GlobalKey key,required widget,required double height,required color}) {
   return Container(
@@ -75,10 +76,10 @@ Widget buildTextButton({required String label, required GlobalKey key,}) {
     child: Text(
       label,
       style: GoogleFonts.inter(
-        textStyle: const TextStyle(
+        textStyle:  TextStyle(
           color: AppColors.primaryColor,
           fontWeight: FontWeight.w700,
-          fontSize: 18, // Use a fixed font size initially
+          fontSize: 13.sp, // Use a fixed font size initially
         ),
       ),
     ),

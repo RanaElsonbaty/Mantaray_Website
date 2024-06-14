@@ -23,7 +23,7 @@ class CustomColumnDeskRightCurved extends StatelessWidget {
           Column(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 80.0),
+                padding: const EdgeInsets.only(left: 80.0,bottom: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -44,8 +44,11 @@ class CustomColumnDeskRightCurved extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: width,
-                    child: HighlightedText(text: content,
-                      fontSize: fontSizContent,),
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 20),
+                      child: HighlightedText(text: content,
+                        fontSize: fontSizContent,),
+                    ),
                   ),
                    CircleAvatar(
                     radius: 100,

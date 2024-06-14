@@ -23,7 +23,7 @@ class CustomColumnDeskLeftCurved extends StatelessWidget {
           Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 80.0),
+                  padding: const EdgeInsets.only(left: 80.0,bottom: 10),
                   child: Row(
                      mainAxisAlignment: MainAxisAlignment.center,
                     children: [
