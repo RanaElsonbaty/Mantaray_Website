@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Image.asset(AppImages.appLogo,height: 120,width: 120,))
                 :GestureDetector(
                 onTap: refreshPage,
-                child: Image.asset(AppImages.appLogo,height: isTablet?160:250,width:isTablet?180: 250,)),
+                child: Image.asset(AppImages.appLogo,height: isTablet?160:220,width:isTablet?180: 220,)),
             backgroundColor: Colors.transparent,
             elevation: 0,
             actions: isMobile
@@ -122,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 buildSection(key: _homeKey,widget: const HomeSection(), height: 450, color: AppColors.whiteColor),
-                buildSection(key: _ourServicesKey, widget: const OurServicesSection(), height:isMobile? 2250:isTablet?1900:2350, color:  AppColors.whiteColor),
+                buildSection(key: _ourServicesKey, widget: const OurServicesSection(), height:isMobile? 2250:isTablet?1950:2350, color:  AppColors.whiteColor),
                 buildSection(key: _wellTestingKey, widget: const WellTestingSection(), height:isMobile?900:isTablet?750: 1700, color: AppColors.whiteColor),
                 buildSection(key: _eorKey, widget: const EorSection(), height:isMobile?820:isTablet?700: 1550, color: AppColors.whiteColor),
                 buildSection(key: _softwareKey, widget: const SoftwareSection(), height:isMobile?520:isTablet?970:970, color:  AppColors.whiteColor),

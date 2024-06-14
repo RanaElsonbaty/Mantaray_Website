@@ -110,7 +110,7 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                 :isTablet?layoutCubit.websiteModel!=null? Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 30),
+                  padding: const EdgeInsets.only(bottom: 30,top: 40),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
