@@ -253,7 +253,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
             ),
             Container(
               width: double.infinity,
-              height: 2100,
+              height: 2160,
               color: AppColors.backGroundColor,
               child:  Column(
                 children: [
@@ -285,7 +285,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   ),
                   const SizedBox(height: 100,),
                   SizedBox(
-                    height:600,
+                    height:640,
                     child: Center(
                       child: GridView.builder(
                         physics: const BouncingScrollPhysics(),

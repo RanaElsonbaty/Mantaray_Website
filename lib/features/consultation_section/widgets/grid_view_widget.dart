@@ -21,7 +21,7 @@ class GridViewWidget extends StatelessWidget {
                 textStyle: TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: titleSize,
-                  color: AppColors.primaryColor
+                  color: AppColors.blackColor
                 )
               ),),
               const SizedBox(height: 12,),
@@ -30,7 +30,7 @@ class GridViewWidget extends StatelessWidget {
                   style: GoogleFonts.inter(
                   textStyle: TextStyle(
                     fontSize: size,
-                      color: AppColors.whiteColor
+                      color: AppColors.blackColor
                   )))
             ],
           ),

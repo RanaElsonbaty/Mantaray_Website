@@ -168,16 +168,15 @@ class _WellTestingSectionState extends State<WellTestingSection> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(
-                     // width: getResponsiveContainerWidth(700),
-                      child: Text("Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
-                        // maxLines: 4,
-                        style: GoogleFonts.inter(
-                            textStyle:TextStyle(
-                                color: AppColors.primaryColor,
-                                fontSize: getResponsiveFontSize(22)
-                            )
-                        ),)),
+                  Text("Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
+                    // maxLines: 4,
+                    textAlign: TextAlign.justify,
+                    style: GoogleFonts.inter(
+                        textStyle:TextStyle(
+                            color: AppColors.primaryColor,
+                            fontSize: getResponsiveFontSize(22)
+                        )
+                    ),),
                   const SizedBox(height: 20,),
                   Text(
                     "Testing:",
@@ -186,16 +185,15 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                         fontWeight: FontWeight.bold,
                         color: AppColors.blackColor),
                   ),
-                  SizedBox(
-                     // width: getResponsiveContainerWidth(700),
-                      child: Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
-                        // maxLines: 4,
-                        style: GoogleFonts.inter(
-                            textStyle:TextStyle(
-                                color: AppColors.primaryColor,
-                                fontSize: getResponsiveFontSize(22)
-                            )
-                        ),)),
+                  Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
+                    textAlign: TextAlign.justify,
+                    // maxLines: 4,
+                    style: GoogleFonts.inter(
+                        textStyle:TextStyle(
+                            color: AppColors.primaryColor,
+                            fontSize: getResponsiveFontSize(22)
+                        )
+                    ),),
                   const SizedBox(height: 50,),
                   Expanded(
                       child: ListView.separated(

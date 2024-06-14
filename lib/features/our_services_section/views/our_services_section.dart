@@ -150,22 +150,22 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                       const SizedBox(height: 50,),
                       CustomColumnDeskLeftCurved(
                         fontSize:  getResponsiveFontSize(16).sp,
-                        text: layoutCubit.websiteModel!.servicesProductionTitle!, width: getResponsiveContainerWidth(4000), content: layoutCubit.websiteModel!.servicesProductionContent!, url: AppImages.leftCurvedLine, fontSizContent: getResponsiveFontSize(16).sp, number: '1', image: AppImages.productionImage,
+                        text: layoutCubit.websiteModel!.servicesProductionTitle!, width: getResponsiveContainerWidth(4000), content: layoutCubit.websiteModel!.servicesProductionContent!, url: AppImages.leftCurvedLine, fontSizContent: getResponsiveFontSize(18).sp, number: '1', image: AppImages.productionImage,
                       ),
                       const SizedBox(height: 60,),
                       CustomColumnDeskRightCurved(
                         fontSize:  getResponsiveFontSize(16).sp,
-                        text: layoutCubit.websiteModel!.servicesApplicationsTitle!, width: getResponsiveContainerWidth(4000), content: layoutCubit.websiteModel!.servicesApplicationsContent!, url: AppImages.rightCurvedLine, fontSizContent: getResponsiveFontSize(16).sp, number: '2', image: AppImages.applicationImage,
+                        text: layoutCubit.websiteModel!.servicesApplicationsTitle!, width: getResponsiveContainerWidth(4000), content: layoutCubit.websiteModel!.servicesApplicationsContent!, url: AppImages.rightCurvedLine, fontSizContent: getResponsiveFontSize(18).sp, number: '2', image: AppImages.applicationImage,
                       ),
                       const SizedBox(height: 60,),
                       CustomColumnDeskLeftCurved(
                         fontSize:  getResponsiveFontSize(16).sp,
-                        text: layoutCubit.websiteModel!.servicesSoftwareTitle!, width: getResponsiveContainerWidth(4000), content: layoutCubit.websiteModel!.servicesSoftwareContent!, url: AppImages.leftCurvedLine, fontSizContent: getResponsiveFontSize(16).sp, number: '3', image: AppImages.softwareImage,
+                        text: layoutCubit.websiteModel!.servicesSoftwareTitle!, width: getResponsiveContainerWidth(4000), content: layoutCubit.websiteModel!.servicesSoftwareContent!, url: AppImages.leftCurvedLine, fontSizContent: getResponsiveFontSize(18).sp, number: '3', image: AppImages.softwareImage,
                       ),
                       const SizedBox(height: 60,),
                       CustomColumnDeskRightCurved(
                         fontSize:  getResponsiveFontSize(16).sp,
-                        text: layoutCubit.websiteModel!.servicesConsultationTitle!, width: getResponsiveContainerWidth(4000), content: layoutCubit.websiteModel!.servicesConsultationContent!, url: AppImages.rightCurvedLine, fontSizContent: getResponsiveFontSize(16).sp, number: '4', image: AppImages.consultationImage,
+                        text: layoutCubit.websiteModel!.servicesConsultationTitle!, width: getResponsiveContainerWidth(4000), content: layoutCubit.websiteModel!.servicesConsultationContent!, url: AppImages.rightCurvedLine, fontSizContent: getResponsiveFontSize(18).sp, number: '4', image: AppImages.consultationImage,
                       ),
                     ],
                   ),

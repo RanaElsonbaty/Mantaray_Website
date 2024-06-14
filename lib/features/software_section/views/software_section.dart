@@ -145,7 +145,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                   ),
                 ),
                 Container(
-                  height: 800,
+                  height: 850,
                   decoration:  BoxDecoration(
                       color: AppColors.whiteColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -213,7 +213,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 820,
+                  height: 830,
                   decoration:  BoxDecoration(
                       color: AppColors.whiteColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
