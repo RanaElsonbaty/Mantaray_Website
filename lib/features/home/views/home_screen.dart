@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Image.asset(AppImages.appLogo,height: 120,width: 120,))
                 :GestureDetector(
                 onTap: refreshPage,
-                child: Image.asset(AppImages.appLogo,height: isTablet?160:220,width:isTablet?180: 220,)),
+                child: Image.asset(AppImages.appLogo,height: isTablet?160:190,width:isTablet?180: 190,)),
             backgroundColor: Colors.transparent,
             elevation: 0,
             actions: isMobile
