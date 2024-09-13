@@ -131,7 +131,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                       Text(
                         layoutCubit.websiteModel!.softwareHeading!.toUpperCase(),
                         style: TextStyle(
-                            fontSize: getResponsiveFontSize(18).sp,
+                            fontSize: getResponsiveFontSize(22).sp,
                             fontWeight: FontWeight.bold,
                             color: AppColors.primaryColor),
                       ),
@@ -169,7 +169,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                             style: GoogleFonts.inter(
                                 textStyle:TextStyle(
                                     color: AppColors.blackColor,
-                                    fontWeight: FontWeight.w700,
+                                    fontWeight: FontWeight.w500,
                                     fontSize: getResponsiveFontSize(22).sp
                                 )
                             ),),
@@ -237,7 +237,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                             style: GoogleFonts.inter(
                                 textStyle:TextStyle(
                                     color: AppColors.blackColor,
-                                    fontWeight: FontWeight.w700,
+                                    fontWeight: FontWeight.w500,
                                     fontSize: getResponsiveFontSize(16).sp
                                 )
                             ),),

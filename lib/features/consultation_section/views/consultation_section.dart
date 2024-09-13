@@ -148,7 +148,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   Text(
                     "Consultation".toUpperCase(),
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(18).sp,
+                        fontSize: getResponsiveFontSize(22).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryColor),
                   ),

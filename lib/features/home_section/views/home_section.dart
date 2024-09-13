@@ -38,22 +38,22 @@ class HomeSection extends StatelessWidget {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadiusDirectional.circular(15)
                     ),
-                    child:Image.asset("assets/video/Welcome.gif",fit: BoxFit.fill,height: 450,),
+                    child:Image.asset("assets/video/mantaray_video.gif",fit: BoxFit.fill,height: 450,),
                   ),
 
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
+                    padding: const EdgeInsets.all(30),
                     child: Center(
-                      child:layoutCubit.websiteModel!=null? Text( layoutCubit.websiteModel!.bannerDescription!,
+                      child: Text( "Welcome to the world of professionalism and innovation with MantaRay.\nOur dedicated team works tirelessly to guarantee client satisfaction and deliver optimal results in every operation.",
                         textAlign: TextAlign.justify,
                         maxLines: 8,
                         style: GoogleFonts.inter(
                             textStyle: TextStyle(
                                 color: AppColors.whiteColor,
                                 fontWeight: FontWeight.w500,
-                                fontSize: isMobile?getResponsiveFontSize(22) :getResponsiveFontSize(18).sp
+                                fontSize: isMobile?getResponsiveFontSize(22) :getResponsiveFontSize(16).sp
                             )
-                        ),):const CircularProgressIndicator(),
+                        ),)
                     ),
                   )]);
           },

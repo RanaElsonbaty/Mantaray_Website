@@ -121,7 +121,7 @@ class _EorSectionState extends State<EorSection> {
                   Text(
                     "Enhanced Oil Recovery - EOR".toUpperCase(),
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(18).sp,
+                        fontSize: getResponsiveFontSize(22).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryColor),
                   ),

@@ -144,7 +144,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                   Text(
                     "well testing".toUpperCase(),
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(18).sp,
+                        fontSize: getResponsiveFontSize(22).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryColor),
                   ),

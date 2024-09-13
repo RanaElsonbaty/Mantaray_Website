@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:mantaray_website/core/utils/app_colors.dart';
 import 'package:mantaray_website/core/utils/app_images.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -52,22 +50,22 @@ class _ContactUsSectionState extends State<ContactUsSection> {
                         setState(() {
                           _launchUrl('https://www.facebook.com/profile.php?id=61560387304276');
                         });
-                      },child: Image.asset(AppImages.facebookImage,height: 5.h,)),
+                      },child: Image.asset(AppImages.facebookImage,height: 4.h,)),
                       InkWell(onTap: (){
                         setState(() {
                           _launchUrl('https://www.linkedin.com/company/103261271/admin/feed/posts/?feedType=following');
                         });
-                      },child: Image.asset(AppImages.linkedInImage,height: 5.h,)),
+                      },child: Image.asset(AppImages.linkedInImage,height: 4.h,)),
                       InkWell(onTap: (){
                         setState(() {
                           _launchUrl('tel:01226151694'); // This should work on a real device
                         });
-                      },child: Image.asset(AppImages.phoneImage,height: 5.h,)),
+                      },child: Image.asset(AppImages.phoneImage,height: 4.h,)),
                       InkWell(onTap: (){
                         setState(() {
                           _launchUrl('mailto:Support@mantarayltd.com'); // Use mailto: scheme for email
                         });
-                      },child: Image.asset(AppImages.emailImage,height: 5.h,)),
+                      },child: Image.asset(AppImages.emailImage,height: 4.h,)),
                   ],),
                 ),
                             ],
@@ -76,13 +74,13 @@ class _ContactUsSectionState extends State<ContactUsSection> {
               : Row(
             children: [
               Expanded(
-                flex: 5,
+                flex: 3,
                 child: Center(
                   child: Column(
                     children: [
                       Padding(
-                        padding: const EdgeInsets.only(top: 70),
-                        child: Image.asset(AppImages.appLogo, height: 800,fit: BoxFit.fill,),
+                        padding: const EdgeInsets.only(top: 200),
+                        child: Image.asset(AppImages.appLogo, height: 600,fit: BoxFit.fill,),
                       ),
                     ],
                   ),
@@ -91,96 +89,100 @@ class _ContactUsSectionState extends State<ContactUsSection> {
               const Spacer(),
               Expanded(
                 flex: 1,
-                child: Column(
-                  children: [
-                    GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          _launchUrl('https://www.facebook.com/profile.php?id=61560387304276');
-                        });
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: AppColors.primaryColor,
-                        ),
-                        padding: const EdgeInsets.all(20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.asset(AppImages.facebookImage,),
-                             Text("Facebook", style: optionStyle),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 50,),
-                    GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          _launchUrl('https://www.linkedin.com/company/103261271/admin/feed/posts/?feedType=following');
-                        });
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: AppColors.primaryColor,
-                        ),
-                        padding: const EdgeInsets.all(20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.asset(AppImages.linkedInImage,),
-                            Text("LinkedIn", style: optionStyle),
-                          ],
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 120,right: 40),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            _launchUrl('https://www.facebook.com/profile.php?id=61560387304276');
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: AppColors.primaryColor,
+                          ),
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Image.asset(AppImages.facebookImage,),
+                               Text("Facebook", style: optionStyle),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 50,),
-                    GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          _launchUrl('tel:01226151694'); // This should work on a real device
-                        });
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: AppColors.primaryColor,
-                        ),
-                        padding: const EdgeInsets.all(20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.asset(AppImages.phoneImage,),
-                            Text("Phone", style: optionStyle),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 50,),
-                    GestureDetector(
-                      onTap: (){
-                        setState(() {
-                          _launchUrl('mailto:Support@mantarayltd.com'); // Use mailto: scheme for email
-                        });
-                      },
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(50),
-                          color: AppColors.primaryColor,
-                        ),
-                        padding: const EdgeInsets.all(20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Image.asset(AppImages.emailImage,),
-                            Text("Email", style: optionStyle),
-                          ],
+                      const SizedBox(height: 50,),
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            _launchUrl('https://www.linkedin.com/company/103261271/admin/feed/posts/?feedType=following');
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: AppColors.primaryColor,
+                          ),
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Image.asset(AppImages.linkedInImage,),
+                              Text("LinkedIn", style: optionStyle),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 50,),
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            _launchUrl('tel:01226151694'); // This should work on a real device
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: AppColors.primaryColor,
+                          ),
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Image.asset(AppImages.phoneImage,),
+                              Text("Phone", style: optionStyle),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 50,),
+                      GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            _launchUrl('mailto:Support@mantarayltd.com'); // Use mailto: scheme for email
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            color: AppColors.primaryColor,
+                          ),
+                          padding: const EdgeInsets.all(20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              Image.asset(AppImages.emailImage,),
+                              Text("Email", style: optionStyle),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

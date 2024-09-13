@@ -124,7 +124,7 @@ class _OurServicesSectionState extends State<OurServicesSection> {
                       Text(
                         layoutCubit.websiteModel!.servicesHeading!.toUpperCase(),
                         style: TextStyle(
-                            fontSize: getResponsiveFontSize(18).sp,
+                            fontSize: getResponsiveFontSize(22).sp,
                             fontWeight: FontWeight.bold,
                             color: AppColors.primaryColor),
                       ),
