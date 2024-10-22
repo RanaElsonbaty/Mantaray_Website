@@ -50,6 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
         }
 
         return Scaffold(
+          backgroundColor: AppColors.whiteColor,
           appBar: AppBar(
             flexibleSpace: Container(
               decoration: BoxDecoration(
@@ -239,51 +240,112 @@ class _HomeScreenState extends State<HomeScreen> {
               : null,
           body: SingleChildScrollView(
             controller: _scrollController,
-            child: Column(
+            child: isMobile? Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                buildSection(
-                    key: _homeKey,
-                    widget:  const HomeSection(),
-                    height: 450,
-                    color: AppColors.whiteColor),
+                ClipRRect(
+                  borderRadius: BorderRadius.all( Radius.circular(18.sp)),
+                  child: buildSection(
+                      key: _homeKey,
+                      widget:  const HomeSection(),
+                      height: 450,
+                      color: AppColors.whiteColor),
+                ),
                 buildSection(
                     key: _ourServicesKey,
                     widget: const OurServicesSection(),
-                    height: isMobile ? 2250 : isTablet ? 1950 : 2350,
+                    height: isMobile ? 2300 : isTablet ? 1630 : 2000,
                     color: AppColors.whiteColor),
                 buildSection(
                     key: _wellTestingKey,
                     widget: const WellTestingSection(),
-                    height: isMobile ? 900 : isTablet ? 750 : 1700,
+                    height: isMobile ? 900 : isTablet ? 770 : 1550,
                     color: AppColors.whiteColor),
                 buildSection(
                     key: _eorKey,
                     widget: const EorSection(),
-                    height: isMobile ? 820 : isTablet ? 700 : 1550,
+                    height: isMobile ? 820 : isTablet ? 700 : 1400,
                     color: AppColors.whiteColor),
                 buildSection(
                     key: _softwareKey,
                     widget: const SoftwareSection(),
-                    height: isMobile ? 520 : isTablet ? 970 : 970,
+                    height: isMobile ? 520 : isTablet ? 850 : 1200,
                     color: AppColors.whiteColor),
                 buildSection(
                     key: _consultationKey,
                     widget: const ConsultationSection(),
-                    height: isMobile ? 2100 : isTablet ? 1050 : 2380,
+                    height: isMobile ? 2100 : isTablet ? 1050 : 1800,
                     color: AppColors.whiteColor),
                 const ReserviorSection(),
                 buildSection(
                     key: _aboutUsKey,
                     widget: const AboutUsSection(),
-                    height: isTablet ? 900 : isMobile ? 850 : 1200,
+                    height: isMobile ? 250 : isTablet ? 350 : 600,
                     color: AppColors.whiteColor),
-                buildSection(
-                    key: _contactUsKey,
-                    widget: const ContactUsSection(),
-                    height: isMobile ? 300 : isTablet ? 400 : 900,
-                    color: AppColors.blackColor),
+                ClipRRect(
+                  borderRadius: BorderRadius.only(topRight: Radius.circular(14.sp),topLeft:  Radius.circular(14.sp)),
+                  child: buildSection(
+                      key: _contactUsKey,
+                      widget: const ContactUsSection(),
+                      height: isMobile ? 250 : isTablet ? 350 : 550,
+                      color: AppColors.blackColor),
+                ),
               ],
+            )
+                : Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.sp),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.all( Radius.circular(18.sp)),
+                    child: buildSection(
+                        key: _homeKey,
+                        widget:  const HomeSection(),
+                        height: 450,
+                        color: AppColors.whiteColor),
+                  ),
+                  buildSection(
+                      key: _ourServicesKey,
+                      widget: const OurServicesSection(),
+                      height: isMobile ? 2300 : isTablet ? 1630 : 2000,
+                      color: AppColors.whiteColor),
+                  buildSection(
+                      key: _wellTestingKey,
+                      widget: const WellTestingSection(),
+                      height: isMobile ? 900 : isTablet ? 770 : 1550,
+                      color: AppColors.whiteColor),
+                  buildSection(
+                      key: _eorKey,
+                      widget: const EorSection(),
+                      height: isMobile ? 820 : isTablet ? 700 : 1400,
+                      color: AppColors.whiteColor),
+                  buildSection(
+                      key: _softwareKey,
+                      widget: const SoftwareSection(),
+                      height: isMobile ? 520 : isTablet ? 850 : 1200,
+                      color: AppColors.whiteColor),
+                  buildSection(
+                      key: _consultationKey,
+                      widget: const ConsultationSection(),
+                      height: isMobile ? 2100 : isTablet ? 1050 : 1800,
+                      color: AppColors.whiteColor),
+                  const ReserviorSection(),
+                  buildSection(
+                      key: _aboutUsKey,
+                      widget: const AboutUsSection(),
+                      height: isMobile ? 250 : isTablet ? 350 : 600,
+                      color: AppColors.whiteColor),
+                  ClipRRect(
+                    borderRadius: BorderRadius.only(topRight: Radius.circular(14.sp),topLeft:  Radius.circular(14.sp)),
+                    child: buildSection(
+                        key: _contactUsKey,
+                        widget: const ContactUsSection(),
+                        height: isMobile ? 250 : isTablet ? 350 : 550,
+                        color: AppColors.blackColor),
+                  ),
+                ],
+              ),
             ),
           ),
         );

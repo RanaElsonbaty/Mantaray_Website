@@ -32,7 +32,7 @@ class CustomColumnDeskLeftCurved extends StatelessWidget {
                         style: GoogleFonts.inter(
                         textStyle: TextStyle(
                             color: AppColors.primaryColor,
-                            fontWeight: FontWeight.w700,
+                            fontWeight: FontWeight.bold,
                             fontSize: fontSize
                         ),
                       ),)

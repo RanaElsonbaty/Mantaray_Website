@@ -21,9 +21,9 @@ class HighlightedText extends StatelessWidget {
           text: text.substring(lastMatchEnd, match.start),
           style: GoogleFonts.inter(
             textStyle: TextStyle(
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w500,
               fontSize: fontSize,
-              color: AppColors.primaryColor
+              color: AppColors.blackColor
             ),
           ),
         ));
@@ -34,6 +34,7 @@ class HighlightedText extends StatelessWidget {
           textStyle: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: fontSize,
+            color: AppColors.primaryColor
           ),
         ),
       ));
@@ -45,9 +46,9 @@ class HighlightedText extends StatelessWidget {
         text: text.substring(lastMatchEnd),
         style: GoogleFonts.inter(
           textStyle: TextStyle(
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.w500,
             fontSize: fontSize,
-              color: AppColors.primaryColor
+              color: AppColors.blackColor
           ),
         ),
       ));

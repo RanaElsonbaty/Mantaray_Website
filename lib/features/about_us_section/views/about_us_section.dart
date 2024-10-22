@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mantaray_website/core/utils/app_colors.dart';
+import 'package:mantaray_website/features/our_services_section/widgets/highlighted_widget.dart';
 import 'package:mantaray_website/layout_cubit/cubit.dart';
 import 'package:mantaray_website/layout_cubit/states.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -14,15 +14,6 @@ class AboutUsSection extends StatefulWidget {
 }
 
 class _AboutUsSectionState extends State<AboutUsSection> {
-  int maxLines = 9; // Initial value for maxLines
-  int maxLinesMobile = 13; // Initial value for maxLines
-  int maxLinesTablet = 11; // Initial value for maxLines for tablet
-  bool showLearnMore = true; // Initial value for showing "Learn more" button
-  bool showLearnMoreMobile = true; // Initial value for showing "Learn more" button
-  bool showLearnMoreTablet = true; // Initial value for showing "Learn more" button for tablet
-  double containerHeight = 450; // Initial value for container height
-  double containerHeightMobile = 380; // Initial value for container height
-  double containerHeightTablet = 400; // Initial value for container height for tablet
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +24,8 @@ class _AboutUsSectionState extends State<AboutUsSection> {
         return LayoutBuilder(
           builder: (context, constraints) {
             final screenWidth = MediaQuery.of(context).size.width;
-            final isMobile = screenWidth < 800;
-            final isTablet = screenWidth >= 800 && screenWidth < 1900;
+            final isMobile = screenWidth < 960;
+            final isTablet = screenWidth >= 960 && screenWidth < 1900;
 
             double getResponsiveFontSize(double baseFontSize) {
               if (isMobile) {
@@ -57,7 +48,7 @@ class _AboutUsSectionState extends State<AboutUsSection> {
             }
 
             return layoutCubit.websiteModel!=null? Padding(
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              padding: const EdgeInsets.symmetric(vertical: 20),
               child: Column(
                 children: [
                   Padding(
@@ -137,167 +128,48 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                     ),
                   ),
                   if (isMobile)
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const CircleAvatar(
-                          radius: 50,
-                          backgroundImage: AssetImage("assets/images/about-us.jpg"),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(top: 20),
-                          padding: const EdgeInsets.all(8),
-                          width:70.w,
-                          height: containerHeightMobile,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: AppColors.backGroundColor,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                layoutCubit.websiteModel!.aboutTitle!,
-                                style: TextStyle(
-                                    color: AppColors.blackColor,
-                                    fontSize: getResponsiveFontSize(16),
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                width:600,
-                                child: Text(
-                                  layoutCubit.websiteModel!.aboutContent!,
-                                  maxLines: maxLinesMobile,
-                                  textAlign: TextAlign.justify,
-                                  style: GoogleFonts.inter(
-                                    textStyle:const TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      color: AppColors.primaryColor
-                                    )
-                                  )
-                                ),
-                              ),
-                              const SizedBox(height: 20),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: [
-                                  MaterialButton(
-                                    color: AppColors.greyColor,
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius: BorderRadiusDirectional.circular(15)),
-                                    onPressed: () {
-                                      setState(() {
-                                        if (maxLinesMobile == 13) {
-                                          maxLinesMobile = 25; // Increase maxLines
-                                          showLearnMoreMobile = false; // Hide "Learn more" button
-                                          containerHeightMobile = 565; // Increase container height
-                                        } else {
-                                          maxLinesMobile = 13; // Reset maxLines
-                                          showLearnMoreMobile = true; // Show "Learn more" button
-                                          containerHeightMobile = 380; // Reset container height
-                                        }
-                                      });
-                                    },
-                                    child: Text(showLearnMoreMobile ? "Learn more" : "Learn less"),
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
-                      ],
+                    Container(
+                      margin: const EdgeInsets.all(8),
+                      padding: const EdgeInsets.all(8),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color:  AppColors.firstCardColor.withOpacity(.2),
+                      ),
+                      child: HighlightedText(text: layoutCubit.websiteModel!.aboutContent!,
+                        fontSize: getResponsiveFontSize(16).sp,),
                     )
                   else if (isTablet)
-                    Column(
-                      children: [
-                        const CircleAvatar(
-                          radius: 70,
-                          backgroundImage: AssetImage("assets/images/about-us.jpg"),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(top: 40),
-                          padding: const EdgeInsets.all(20),
-                          height: containerHeightTablet, // Dynamic container height for tablet
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: AppColors.backGroundColor,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                layoutCubit.websiteModel!.aboutTitle!,
-                                style: TextStyle(
-                                    color: AppColors.blackColor,
-                                    fontSize: getResponsiveFontSize(16.sp),
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                child: Text(
-                                  layoutCubit.websiteModel!.aboutContent!,
-                                  textAlign: TextAlign.justify,
-                                  maxLines: maxLinesTablet,
-                                    style: GoogleFonts.inter(
-                                        textStyle: TextStyle(
-                                            color: AppColors.primaryColor,
-                                          fontWeight: FontWeight.w600,
-                                          fontSize: getResponsiveFontSize(18).sp,
-                                        )
-                                    )
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    Container(
+                      padding: const EdgeInsets.symmetric(vertical: 20,horizontal: 45),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color:  AppColors.firstCardColor.withOpacity(.2),
+                      ),
+                      child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: HighlightedText(text: layoutCubit.websiteModel!.aboutContent!,
+                            fontSize: getResponsiveFontSize(20).sp,)
+                      ),
                     )
                   else
-                    Column(
-                      children: [
-                         CircleAvatar(
-                          radius: 30.sp,
-                          backgroundImage: const AssetImage("assets/images/about-us.jpg"),
-                        ),
-                        const SizedBox(height: 60,),
-                        Container(
-                          // margin: const EdgeInsets.all(20),
-                          padding: const EdgeInsets.all(20),
-                          height: containerHeight, // Dynamic container height
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: AppColors.backGroundColor,
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                layoutCubit.websiteModel!.aboutTitle!,
-                                style: TextStyle(
-                                    color: AppColors.blackColor,
-                                    fontSize: getResponsiveFontSize(16).sp,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                layoutCubit.websiteModel!.aboutContent!,
-                                textAlign: TextAlign.justify,
-                                maxLines: maxLines,
-                                  style: GoogleFonts.inter(
-                                      textStyle:  TextStyle(
-                                        color: AppColors.primaryColor,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: getResponsiveFontSize(14).sp,
-                                      )
-                                  )
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                    Container(
+                      padding: const EdgeInsets.symmetric(vertical: 40,horizontal: 70),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: AppColors.firstCardColor.withOpacity(.2),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: HighlightedText(text: layoutCubit.websiteModel!.aboutContent!,
+                          fontSize: getResponsiveFontSize(14).sp,)
+                      ),
                     ),
                 ],
               ),
             )
-            :const Center(child: CircularProgressIndicator());
+            :const Center(child: CircularProgressIndicator(
+              color: AppColors.primaryColor,
+            ));
           },
         );
       },

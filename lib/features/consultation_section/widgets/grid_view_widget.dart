@@ -25,13 +25,17 @@ class GridViewWidget extends StatelessWidget {
                 )
               ),),
               const SizedBox(height: 12,),
-              Text(consultList[index].content,
-                  textAlign: TextAlign.justify,
-                  style: GoogleFonts.inter(
-                  textStyle: TextStyle(
-                    fontSize: size,
-                      color: AppColors.blackColor
-                  )))
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(consultList[index].content,
+                    textAlign: TextAlign.justify,
+                    style: GoogleFonts.inter(
+                    textStyle: TextStyle(
+                      fontSize: size,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.blackColor
+                    ))),
+              )
             ],
           ),
         ),

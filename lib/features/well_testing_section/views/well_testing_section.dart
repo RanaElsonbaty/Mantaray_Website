@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mantaray_website/core/utils/app_colors.dart';
+import 'package:mantaray_website/features/our_services_section/widgets/highlighted_widget.dart';
 import 'package:mantaray_website/features/well_testing_section/data/model/product_model.dart';
 import 'package:mantaray_website/features/well_testing_section/widgets/product_widget.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -83,14 +84,12 @@ class _WellTestingSectionState extends State<WellTestingSection> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
-                    textAlign: TextAlign.justify,
-                    style: GoogleFonts.inter(
-                        textStyle:TextStyle(
-                            color: AppColors.primaryColor,
-                            fontSize: getResponsiveFontSize(22)
-                        )
-                    ),),
+                  SizedBox(
+                      width:90.w,
+                      child: HighlightedText(text:
+                      "Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
+                        fontSize: getResponsiveFontSize(22).sp,)
+                  ),
                   const SizedBox(height: 20,),
                   Text(
                     "Testing:",
@@ -99,14 +98,12 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                         fontWeight: FontWeight.bold,
                         color: AppColors.blackColor),
                   ),
-                  Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
-                    textAlign: TextAlign.justify,
-                    style: GoogleFonts.inter(
-                        textStyle:TextStyle(
-                            color: AppColors.primaryColor,
-                            fontSize: getResponsiveFontSize(22)
-                        )
-                    ),),
+                  SizedBox(
+                      width:90.w,
+                      child: HighlightedText(text:
+                      "Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
+                        fontSize: getResponsiveFontSize(22).sp,)
+                  ),
                   const SizedBox(height: 50,),
                   Expanded(
                       child: ListView.separated(
@@ -158,9 +155,9 @@ class _WellTestingSectionState extends State<WellTestingSection> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.all(8),
+              padding: const EdgeInsets.symmetric(horizontal: 65,vertical: 30),
               width: double.infinity,
-              height: 650,
+              height: 670,
               decoration:  BoxDecoration(
                   color: AppColors.backGroundColor,
                   borderRadius: BorderRadiusDirectional.circular(15)
@@ -168,32 +165,20 @@ class _WellTestingSectionState extends State<WellTestingSection> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
-                    // maxLines: 4,
-                    textAlign: TextAlign.justify,
-                    style: GoogleFonts.inter(
-                        textStyle:TextStyle(
-                            color: AppColors.primaryColor,
-                            fontSize: getResponsiveFontSize(22)
-                        )
-                    ),),
+                  HighlightedText(text:"Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
+                   fontSize: getResponsiveFontSize(19).sp,),
                   const SizedBox(height: 20,),
                   Text(
                     "Testing:",
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(24),
+                        fontSize: getResponsiveFontSize(20).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.blackColor),
                   ),
-                  Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
-                    textAlign: TextAlign.justify,
-                    // maxLines: 4,
-                    style: GoogleFonts.inter(
-                        textStyle:TextStyle(
-                            color: AppColors.primaryColor,
-                            fontSize: getResponsiveFontSize(22)
-                        )
-                    ),),
+                  const SizedBox(height: 7,),
+                  HighlightedText(text:
+                  "Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
+                    fontSize: getResponsiveFontSize(19).sp,),
                   const SizedBox(height: 50,),
                   Expanded(
                       child: ListView.separated(
@@ -244,9 +229,9 @@ class _WellTestingSectionState extends State<WellTestingSection> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.all(8),
+              padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 30),
               width: double.infinity,
-              height: 1550,
+              height: 1360,
               decoration:  BoxDecoration(
                   color: AppColors.backGroundColor,
                   borderRadius: BorderRadiusDirectional.circular(15)
@@ -256,30 +241,21 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
-                      textAlign: TextAlign.justify,
-                      style: GoogleFonts.inter(
-                          textStyle:TextStyle(
-                              color: AppColors.primaryColor,
-                              fontSize: getResponsiveFontSize(16).sp
-                          )
-                      ),),
+                    HighlightedText(text:"Mantaray Oilfields Services is committed to maximizing the yield and efficiency of oil  extraction processes. We offer comprehensive solutions tailored to meet your needs.",
+                       fontSize: getResponsiveFontSize(14).sp,),
                     const SizedBox(height: 20,),
                     Text(
                       "Testing:",
                       style: TextStyle(
-                          fontSize: getResponsiveFontSize(18).sp,
+                          fontSize: getResponsiveFontSize(16).sp,
                           fontWeight: FontWeight.bold,
                           color: AppColors.blackColor),
                     ),
-                    Text("Testing: Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
-                      textAlign: TextAlign.justify,
-                      style: GoogleFonts.inter(
-                          textStyle:TextStyle(
-                              color: AppColors.primaryColor,
-                              fontSize: getResponsiveFontSize(16).sp
-                          )
-                      ),),
+                    const SizedBox(height: 15,),
+                    HighlightedText(text:
+                    "Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
+                      fontSize: getResponsiveFontSize(14).sp,),
+
                     const SizedBox(height: 100,),
                     Expanded(
                         child: ListView.separated(
@@ -288,7 +264,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                           itemCount: productsTop.length,
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
-                            return ProductWidget(index: index, titleFontSize: getResponsiveFontSize(18).sp, containerHeight: 750, containerWidth: 550, imageHeight:350, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
+                            return ProductWidget(index: index, titleFontSize: getResponsiveFontSize(16).sp, containerHeight: 750, containerWidth: 550, imageHeight:350, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
                           }, separatorBuilder: (BuildContext context, int index) {
                           return SizedBox(width: 12.w,);
                         },

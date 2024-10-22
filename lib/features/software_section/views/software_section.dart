@@ -80,7 +80,6 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                 Container(
                   padding: const EdgeInsets.only(left: 10),
                   width: double.infinity,
-                  height: 450,
                   decoration:  BoxDecoration(
                       color: AppColors.whiteColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -88,14 +87,6 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                   child: Center(
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            Image.asset(AppImages.softwareSectionImage,width: 75.w,),
-                            Image.asset(AppImages.softwareLogoImage,height: 15.h,width: 15.w,),
-
-                          ],
-                        ),
-                        SizedBox(height: 3.h,),
                         SizedBox(
                             width:90.w,
                             child: Text(layoutCubit.websiteModel!.softwareContent!,
@@ -106,14 +97,20 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                                       fontWeight: FontWeight.w700,
                                       fontSize: getResponsiveFontSize(22)
                                   )
-                              ),))
+                              ),)),
+                        Image.asset(AppImages.softwareLogoImage,height: 15.h,width: 20.w,),
+                        SizedBox(
+                          width: double.infinity,
+                            child: Image.asset(AppImages.softwareSectionImage,height: 200)),
+
+
                       ],
                     ),
                   ),
                 )
               ],
             )
-                :const Center(child: CircularProgressIndicator())
+                :const Center(child: CircularProgressIndicator(color: AppColors.primaryColor,))
                 : isTablet? layoutCubit.websiteModel!=null? Column(
               children: [
                 Padding(
@@ -145,7 +142,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                   ),
                 ),
                 Container(
-                  height: 850,
+                  width: double.infinity,
                   decoration:  BoxDecoration(
                       color: AppColors.whiteColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -153,34 +150,33 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                   child: Center(
                     child: Column(
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(AppImages.softwareSectionImage,width: 70.w,),
-                            SizedBox(width: 3.w,),
-                            Image.asset(AppImages.softwareLogoImage,height: 7.h,width: 7.w,),
-                          ],
-                        ),
-                        SizedBox(height: 7.h,),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          padding: const EdgeInsets.symmetric(horizontal: 65),
                           child: Text(layoutCubit.websiteModel!.softwareContent!,
                             textAlign: TextAlign.justify,
                             style: GoogleFonts.inter(
                                 textStyle:TextStyle(
                                     color: AppColors.blackColor,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: getResponsiveFontSize(22).sp
+                                    fontSize: getResponsiveFontSize(20).sp
                                 )
                             ),),
-                        )
+                        ),
+                        SizedBox(height: 7.h,),
+                        Image.asset(AppImages.softwareLogoImage,height: 10.h,width: 10.w,),
+                        Container(
+                            margin: EdgeInsets.symmetric(horizontal: 5.w),
+                            width: double.infinity,
+                            child: Image.asset(AppImages.softwareSectionImage,width: double.infinity,height: 450,
+                              fit: BoxFit.fill,)),
+
                       ],
                     ),
                   ),
                 )
               ],
             )
-                :const Center(child: CircularProgressIndicator())
+                :const Center(child: CircularProgressIndicator(color: AppColors.primaryColor,))
                 :layoutCubit.websiteModel!=null? Column(
               children: [
                 Padding(
@@ -213,7 +209,6 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                 ),
                 Container(
                   width: double.infinity,
-                  height: 830,
                   decoration:  BoxDecoration(
                       color: AppColors.whiteColor,
                       borderRadius: BorderRadiusDirectional.circular(15)
@@ -221,34 +216,33 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                   child: Center(
                     child: Column(
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(AppImages.softwareSectionImage,),
-                            SizedBox(width: 7.w,),
-                            Image.asset(AppImages.softwareLogoImage,height: 10.h,width: 10.w,),
-                          ],
-                        ),
-                        SizedBox(height: 7.h,),
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 22),
+                          padding: const EdgeInsets.symmetric(horizontal: 60),
                           child: Text(layoutCubit.websiteModel!.softwareContent!,
                             textAlign: TextAlign.justify,
                             style: GoogleFonts.inter(
                                 textStyle:TextStyle(
                                     color: AppColors.blackColor,
                                     fontWeight: FontWeight.w500,
-                                    fontSize: getResponsiveFontSize(16).sp
+                                    fontSize: getResponsiveFontSize(14).sp
                                 )
                             ),),
-                        )
+                        ),
+                        SizedBox(height: 10.h,),
+                        Image.asset(AppImages.softwareLogoImage,height: 10.h,width: 10.w,),
+                        Container(
+                          margin: EdgeInsets.symmetric(horizontal: 5.w),
+                          width: double.infinity,
+                            child: Image.asset(AppImages.softwareSectionImage,width: double.infinity,height: 700,
+                            fit: BoxFit.fill,)),
+
                       ],
                     ),
                   ),
                 )
               ],
             )
-                :const Center(child: CircularProgressIndicator());
+                :const Center(child: CircularProgressIndicator(color: AppColors.primaryColor,));
           },
 
         );

@@ -32,7 +32,7 @@ class _ProductWidgetState extends State<ProductWidget> {
           style: GoogleFonts.inter(
             textStyle:  TextStyle(
               fontSize: widget.titleFontSize,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w600,
               color: AppColors.blackColor,
             ),
           ),
@@ -57,7 +57,7 @@ class _ProductWidgetState extends State<ProductWidget> {
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   productsTop[widget.index].description,
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.start,
                   style: GoogleFonts.inter(
                     textStyle:  TextStyle(
                       fontWeight: FontWeight.w400,
@@ -108,7 +108,7 @@ class _ProductWidgetState extends State<ProductWidget> {
             child: Column(
               children: [
                 Text(productsTop[widget.index].more,
-                  textAlign: TextAlign.justify,
+                  textAlign: TextAlign.start,
                   style: GoogleFonts.inter(
                   textStyle: TextStyle(
                     color: AppColors.whiteColor,
