@@ -13,7 +13,7 @@ class GridViewWidget extends StatelessWidget {
     return  Container(
       color: consultList[index].color,
       child:  Padding(
-        padding: const EdgeInsets.all(22),
+        padding: const EdgeInsets.symmetric(horizontal: 22,vertical: 12),
         child: Center(
           child: Column(
             children: [

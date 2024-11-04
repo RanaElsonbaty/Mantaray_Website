@@ -181,17 +181,24 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                     fontSize: getResponsiveFontSize(19).sp,),
                   const SizedBox(height: 50,),
                   Expanded(
-                      child: ListView.separated(
-                        shrinkWrap: true,
-                        physics: const BouncingScrollPhysics(),
-                        itemCount: productsTop.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return ProductWidget(index: index, titleFontSize: 20, containerHeight: 350, containerWidth: 230, imageHeight: 150, imageWidth: 230, descriptionFontSize: 18, moreFontSize: 18, showSize: 14,);
-                        }, separatorBuilder: (BuildContext context, int index) {
-                        return SizedBox(width: 12.w,);
-                      },
-                      )
+                    child: Row(
+                      children: [
+                        SizedBox(width: 4.w,),
+                        Expanded(
+                            child: ListView.separated(
+                              shrinkWrap: true,
+                              physics: const BouncingScrollPhysics(),
+                              itemCount: productsTop.length,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return ProductWidget(index: index, titleFontSize: 20, containerHeight: 350, containerWidth: 230, imageHeight: 150, imageWidth: 230, descriptionFontSize: 18, moreFontSize: 18, showSize: 14,);
+                              }, separatorBuilder: (BuildContext context, int index) {
+                              return SizedBox(width: 7.w,);
+                            },
+                            )
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -266,7 +273,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                           itemBuilder: (context, index) {
                             return ProductWidget(index: index, titleFontSize: getResponsiveFontSize(16).sp, containerHeight: 750, containerWidth: 550, imageHeight:350, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
                           }, separatorBuilder: (BuildContext context, int index) {
-                          return SizedBox(width: 12.w,);
+                          return SizedBox(width: 5.w,);
                         },
                         )
                     ),

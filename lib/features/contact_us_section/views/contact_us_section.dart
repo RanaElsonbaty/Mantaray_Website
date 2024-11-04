@@ -42,8 +42,8 @@ class _ContactUsSectionState extends State<ContactUsSection> {
               child: Column(
                 children: [
                   Container(
-                      margin: const EdgeInsets.only(top: 30),
-                      height: 150,
+                      margin: const EdgeInsets.only(top: 70),
+                      height: 100,
                       child: Image.asset(AppImages.appLogo, fit: BoxFit.fill,)),
                 ],
               ),
@@ -135,8 +135,8 @@ class _ContactUsSectionState extends State<ContactUsSection> {
               child: Column(
                 children: [
                   Container(
-                      margin: const EdgeInsets.only(top: 35),
-                      height: 270,
+                      margin: const EdgeInsets.only(top: 50),
+                      height: 240,
                       child: Image.asset(AppImages.appLogo, fit: BoxFit.fill,)),
                 ],
               ),
@@ -251,8 +251,8 @@ class _ContactUsSectionState extends State<ContactUsSection> {
               child: Column(
                 children: [
                   Container(
-                      margin: const EdgeInsets.only(top: 70),
-                      height: 450,
+                      margin: const EdgeInsets.only(top: 90),
+                      height: 430,
                       child: Image.asset(AppImages.appLogo, fit: BoxFit.fill,)),
                 ],
               ),

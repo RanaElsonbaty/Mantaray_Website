@@ -144,17 +144,24 @@ class _EorSectionState extends State<EorSection> {
                      fontSize:getResponsiveFontSize(19).sp ,),
                   const SizedBox(height: 40,),
                   Expanded(
-                      child: ListView.separated(
-                        shrinkWrap: true,
-                        physics: const BouncingScrollPhysics(),
-                        itemCount: productsBottom.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return ProductBottomWidget(index: index,titleFontSize: 20, containerHeight: 350, containerWidth: 230, imageHeight: 150, imageWidth: 230, descriptionFontSize: 18, moreFontSize: 18, showSize: 14,);
-                        }, separatorBuilder: (BuildContext context, int index) {
-                        return SizedBox(width: 12.w,);
-                      },
-                      )
+                    child: Row(
+                      children: [
+                        SizedBox(width: 6.w,),
+                        Expanded(
+                            child: ListView.separated(
+                              shrinkWrap: true,
+                              physics: const BouncingScrollPhysics(),
+                              itemCount: productsBottom.length,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return ProductBottomWidget(index: index,titleFontSize: 20, containerHeight: 350, containerWidth: 230, imageHeight: 150, imageWidth: 230, descriptionFontSize: 18, moreFontSize: 18, showSize: 14,);
+                              }, separatorBuilder: (BuildContext context, int index) {
+                              return SizedBox(width: 8.w,);
+                            },
+                            )
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -206,17 +213,24 @@ class _EorSectionState extends State<EorSection> {
                    fontSize: getResponsiveFontSize(14).sp,),
                   const SizedBox(height: 60,),
                   Expanded(
-                      child: ListView.separated(
-                        shrinkWrap: true,
-                        physics: const BouncingScrollPhysics(),
-                        itemCount: productsBottom.length,
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          return ProductBottomWidget(index: index, titleFontSize: getResponsiveFontSize(16).sp, containerHeight: 750, containerWidth: 550, imageHeight:350, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
-                        }, separatorBuilder: (BuildContext context, int index) {
-                        return SizedBox(width: 12.w,);
-                      },
-                      )
+                    child: Row(
+                      children: [
+                        SizedBox(width: 3.w,),
+                        Expanded(
+                            child: ListView.separated(
+                              shrinkWrap: true,
+                              physics: const BouncingScrollPhysics(),
+                              itemCount: productsBottom.length,
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return ProductBottomWidget(index: index, titleFontSize: getResponsiveFontSize(16).sp, containerHeight: 750, containerWidth: 550, imageHeight:350, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
+                              }, separatorBuilder: (BuildContext context, int index) {
+                              return SizedBox(width: 6.w,);
+                            },
+                            )
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),

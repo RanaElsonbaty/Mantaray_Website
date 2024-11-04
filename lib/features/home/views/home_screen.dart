@@ -274,7 +274,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 buildSection(
                     key: _consultationKey,
                     widget: const ConsultationSection(),
-                    height: isMobile ? 2100 : isTablet ? 1050 : 1800,
+                    height: isMobile ? 2050 : isTablet ? 1000 : 1700,
                     color: AppColors.whiteColor),
                 const ReserviorSection(),
                 buildSection(
@@ -328,7 +328,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildSection(
                       key: _consultationKey,
                       widget: const ConsultationSection(),
-                      height: isMobile ? 2100 : isTablet ? 1050 : 1800,
+                      height: isMobile ? 2050 : isTablet ? 1000 : 1700,
                       color: AppColors.whiteColor),
                   const ReserviorSection(),
                   buildSection(
