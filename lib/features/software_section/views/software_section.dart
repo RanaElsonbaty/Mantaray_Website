@@ -228,10 +228,10 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                             ),),
                         ),
                         SizedBox(height: 10.h,),
-                        Image.asset(AppImages.softwareLogoImage,width: 12.w,),
+                        Image.asset(AppImages.softwareLogoImage,width: 8.w,),
                         Container(
-                          margin: EdgeInsets.symmetric(horizontal: 5.w),
-                            child: Image.asset(AppImages.softwareSectionImage,height: 750,
+                          margin: EdgeInsets.symmetric(horizontal: 20.w),
+                            child: Image.asset(AppImages.softwareSectionImage,height: 600,
                             fit: BoxFit.fill,)),
 
                       ],

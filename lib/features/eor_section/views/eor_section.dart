@@ -199,7 +199,7 @@ class _EorSectionState extends State<EorSection> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 50),
               width: double.infinity,
               height: 1200,
               decoration:  BoxDecoration(
@@ -211,11 +211,11 @@ class _EorSectionState extends State<EorSection> {
                 children: [
                   HighlightedText(text:"Mantaray provides advanced polymer technologies to improve the performance and  economics of Oil & Gas extraction operations.  Our solutions are designed to meet or exceed  the needs of our customers in the Oil & Gas industry.  In all Oil & Gas applications, Mantaray offers tailored polymers and equipment solutions  from conceptual lab studies through to full-field operations.  Our support services include:",
                    fontSize: getResponsiveFontSize(14).sp,),
-                  const SizedBox(height: 60,),
+                  const SizedBox(height: 110,),
                   Expanded(
                     child: Row(
                       children: [
-                        SizedBox(width: 3.w,),
+                        SizedBox(width: 8.w,),
                         Expanded(
                             child: ListView.separated(
                               shrinkWrap: true,
@@ -223,9 +223,9 @@ class _EorSectionState extends State<EorSection> {
                               itemCount: productsBottom.length,
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {
-                                return ProductBottomWidget(index: index, titleFontSize: getResponsiveFontSize(16).sp, containerHeight: 750, containerWidth: 550, imageHeight:350, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
+                                return ProductBottomWidget(index: index, titleFontSize: getResponsiveFontSize(15).sp, containerHeight: 650, containerWidth: 400, imageHeight:250, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
                               }, separatorBuilder: (BuildContext context, int index) {
-                              return SizedBox(width: 6.w,);
+                              return SizedBox(width: 5.w,);
                             },
                             )
                         ),

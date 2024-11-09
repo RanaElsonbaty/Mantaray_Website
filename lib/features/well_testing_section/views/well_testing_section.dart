@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mantaray_website/core/utils/app_colors.dart';
 import 'package:mantaray_website/features/our_services_section/widgets/highlighted_widget.dart';
 import 'package:mantaray_website/features/well_testing_section/data/model/product_model.dart';
@@ -236,7 +235,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 50),
               width: double.infinity,
               height: 1360,
               decoration:  BoxDecoration(
@@ -263,19 +262,26 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                     "Mantaray conducts thorough testing of production wells to assess reservoir characteristics,  flow rates, fluid properties, and well integrity. This includes initial well testing, extended well testing, and well performance evaluation.",
                       fontSize: getResponsiveFontSize(14).sp,),
 
-                    const SizedBox(height: 100,),
+                    const SizedBox(height: 160,),
                     Expanded(
-                        child: ListView.separated(
-                          shrinkWrap: true,
-                          physics: const BouncingScrollPhysics(),
-                          itemCount: productsTop.length,
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) {
-                            return ProductWidget(index: index, titleFontSize: getResponsiveFontSize(16).sp, containerHeight: 750, containerWidth: 550, imageHeight:350, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
-                          }, separatorBuilder: (BuildContext context, int index) {
-                          return SizedBox(width: 5.w,);
-                        },
-                        )
+                      child: Row(
+                        children: [
+                          SizedBox(width: 5.7.w,),
+                          Expanded(
+                              child: ListView.separated(
+                                shrinkWrap: true,
+                                physics: const BouncingScrollPhysics(),
+                                itemCount: productsTop.length,
+                                scrollDirection: Axis.horizontal,
+                                itemBuilder: (context, index) {
+                                  return ProductWidget(index: index, titleFontSize: getResponsiveFontSize(15).sp, containerHeight: 650, containerWidth: 400, imageHeight:250, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
+                                }, separatorBuilder: (BuildContext context, int index) {
+                                return SizedBox(width: 4.w,);
+                              },
+                              )
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
