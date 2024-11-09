@@ -201,7 +201,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   ),
                   const SizedBox(height: 40,),
                   SizedBox(
-                    height: 260,
+                    height: 270,
                     child: GridView.builder(
                       physics: const BouncingScrollPhysics(),
                       itemCount: 4,
