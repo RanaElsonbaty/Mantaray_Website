@@ -114,7 +114,7 @@ class _AboutUsSectionState extends State<AboutUsSection> {
                         Text(
                           layoutCubit.websiteModel!.aboutHeading!.toUpperCase(),
                           style: TextStyle(
-                              fontSize: getResponsiveFontSize(18).sp,
+                              fontSize: getResponsiveFontSize(16).sp,
                               fontWeight: FontWeight.bold,
                               color: AppColors.primaryColor),
                         ),

@@ -254,17 +254,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 buildSection(
                     key: _ourServicesKey,
                     widget: const OurServicesSection(),
-                    height: isMobile ? 2300 : isTablet ? 1630 : 2000,
+                    height: isMobile ? 2300 : isTablet ? 1630 : 1950,
                     color: AppColors.whiteColor),
                 buildSection(
                     key: _wellTestingKey,
                     widget: const WellTestingSection(),
-                    height: isMobile ? 900 : isTablet ? 770 : 1550,
+                    height: isMobile ? 900 : isTablet ? 770 : 1270,
                     color: AppColors.whiteColor),
                 buildSection(
                     key: _eorKey,
                     widget: const EorSection(),
-                    height: isMobile ? 820 : isTablet ? 700 : 1400,
+                    height: isMobile ? 820 : isTablet ? 700 : 1120,
                     color: AppColors.whiteColor),
                 buildSection(
                     key: _softwareKey,
@@ -274,7 +274,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 buildSection(
                     key: _consultationKey,
                     widget: const ConsultationSection(),
-                    height: isMobile ? 2050 : isTablet ? 1000 : 1700,
+                    height: isMobile ? 2050 : isTablet ? 1000 : 1900,
                     color: AppColors.whiteColor),
                 const ReserviorSection(),
                 buildSection(
@@ -308,17 +308,17 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildSection(
                       key: _ourServicesKey,
                       widget: const OurServicesSection(),
-                      height: isMobile ? 2300 : isTablet ? 1630 : 2000,
+                      height: isMobile ? 2300 : isTablet ? 1630 : 1950,
                       color: AppColors.whiteColor),
                   buildSection(
                       key: _wellTestingKey,
                       widget: const WellTestingSection(),
-                      height: isMobile ? 900 : isTablet ? 770 : 1550,
+                      height: isMobile ? 900 : isTablet ? 770 : 1270,
                       color: AppColors.whiteColor),
                   buildSection(
                       key: _eorKey,
                       widget: const EorSection(),
-                      height: isMobile ? 820 : isTablet ? 700 : 1400,
+                      height: isMobile ? 820 : isTablet ? 700 : 1120,
                       color: AppColors.whiteColor),
                   buildSection(
                       key: _softwareKey,
@@ -328,7 +328,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildSection(
                       key: _consultationKey,
                       widget: const ConsultationSection(),
-                      height: isMobile ? 2050 : isTablet ? 1000 : 1700,
+                      height: isMobile ? 2050 : isTablet ? 1000 : 1900,
                       color: AppColors.whiteColor),
                   const ReserviorSection(),
                   buildSection(

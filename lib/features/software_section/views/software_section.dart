@@ -179,7 +179,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                 :layoutCubit.websiteModel!=null? Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 30),
+                  padding: const EdgeInsets.only(bottom: 50),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -193,7 +193,7 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                       Text(
                         layoutCubit.websiteModel!.softwareHeading!.toUpperCase(),
                         style: TextStyle(
-                            fontSize: getResponsiveFontSize(18).sp,
+                            fontSize: getResponsiveFontSize(16).sp,
                             fontWeight: FontWeight.bold,
                             color: AppColors.primaryColor),
                       ),

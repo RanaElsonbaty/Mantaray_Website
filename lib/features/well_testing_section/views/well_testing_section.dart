@@ -91,7 +91,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                   ),
                   const SizedBox(height: 20,),
                   Text(
-                    "Testing:",
+                    "Testing",
                     style: TextStyle(
                         fontSize: getResponsiveFontSize(24),
                         fontWeight: FontWeight.bold,
@@ -168,7 +168,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                    fontSize: getResponsiveFontSize(19).sp,),
                   const SizedBox(height: 20,),
                   Text(
-                    "Testing:",
+                    "Testing",
                     style: TextStyle(
                         fontSize: getResponsiveFontSize(20).sp,
                         fontWeight: FontWeight.bold,
@@ -207,7 +207,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
         : Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(bottom: 30),
+              padding: const EdgeInsets.only(bottom: 50),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -221,7 +221,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                   Text(
                     "well testing".toUpperCase(),
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(18).sp,
+                        fontSize: getResponsiveFontSize(16).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryColor),
                   ),
@@ -237,7 +237,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 50),
               width: double.infinity,
-              height: 1360,
+              height: 1100,
               decoration:  BoxDecoration(
                   color: AppColors.backGroundColor,
                   borderRadius: BorderRadiusDirectional.circular(15)
@@ -251,9 +251,9 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                        fontSize: getResponsiveFontSize(14).sp,),
                     const SizedBox(height: 20,),
                     Text(
-                      "Testing:",
+                      "Testing",
                       style: TextStyle(
-                          fontSize: getResponsiveFontSize(16).sp,
+                          fontSize: getResponsiveFontSize(15).sp,
                           fontWeight: FontWeight.bold,
                           color: AppColors.blackColor),
                     ),
@@ -266,7 +266,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                     Expanded(
                       child: Row(
                         children: [
-                          SizedBox(width: 5.7.w,),
+                          SizedBox(width: 11.w,),
                           Expanded(
                               child: ListView.separated(
                                 shrinkWrap: true,
@@ -274,7 +274,7 @@ class _WellTestingSectionState extends State<WellTestingSection> {
                                 itemCount: productsTop.length,
                                 scrollDirection: Axis.horizontal,
                                 itemBuilder: (context, index) {
-                                  return ProductWidget(index: index, titleFontSize: getResponsiveFontSize(15).sp, containerHeight: 650, containerWidth: 400, imageHeight:250, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
+                                  return ProductWidget(index: index, titleFontSize: getResponsiveFontSize(14).sp, containerHeight: 400, containerWidth: 300, imageHeight:150, imageWidth: 300, descriptionFontSize: 24, moreFontSize: 20, showSize: 20,);
                                 }, separatorBuilder: (BuildContext context, int index) {
                                 return SizedBox(width: 4.w,);
                               },

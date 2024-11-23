@@ -91,7 +91,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text("Our Approach : ",style: GoogleFonts.inter(
+                        Text("Our Approach",style: GoogleFonts.inter(
                             textStyle:const TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 22,
@@ -179,11 +179,11 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                       fontSize: getResponsiveFontSize(20).sp ,),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 30,bottom: 15),
+                    padding: const EdgeInsets.only(top: 20,bottom: 8),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text("  Our Approach : ",
+                        Text("  Our Approach",
                           style: GoogleFonts.inter(
                             textStyle: TextStyle(
                                 fontWeight: FontWeight.bold,
@@ -224,7 +224,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
             : Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(bottom: 30),
+              padding: const EdgeInsets.only(bottom: 50),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -238,7 +238,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   Text(
                     "Consultation".toUpperCase(),
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(18).sp,
+                        fontSize: getResponsiveFontSize(16).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryColor),
                   ),
@@ -266,23 +266,21 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                     child: HighlightedText(text: 'At Mantaray, we specialize in delivering tailored consultation services designed to foster  growth and innovation within your organization. Our team comprises seasoned consultants  with diverse industry experience, ensuring that we provide customized solutions that  address your specific business challenges and objectives.  Mantaray offers a wide array of geoscience and engineering consulting services. Our  offerings range from highly focused single-well investigations to fully integrated field studies  and field development planning, including project economics and risk assessment. To  ensure consistent, high-quality results, Mantaray applies patented, tightly integrated  workflow processes developed while solving complex problems.',
                       fontSize: getResponsiveFontSize(14).sp,),
                   ),
-                  const SizedBox(height: 40,),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text("Our Approach : ",style: GoogleFonts.inter(
+                        Text("Our Approach",style: GoogleFonts.inter(
                           textStyle: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: getResponsiveFontSize(16).sp,
+                            fontSize: getResponsiveFontSize(14).sp,
                             color: AppColors.blackColor
                           ),
                         ),),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 30,),
                   Padding(
                     padding: const EdgeInsets.all(20),
                     child: HighlightedText(text:" Tailored Solutions: We understand that every organization is unique. That's why we take  the time to listen to your needs and challenges, crafting solutions that are specifically  tailored to meet your requirements.\n Industry Expertise: Our consultants have a deep understanding of various disciplines in oil  and gas industry as: Exploration, Reservoir Engineering, and Operations. This breadth of  experience allows us to offer insights and strategies that drive success in any sector.\n Collaborative Partnership: We believe in building strong relationships with our clients  based on trust, transparency, and collaboration. By working closely with your team, we  ensure that our solutions are not only effective but also sustainable in the long run.\n Continuous Improvement: In a rapidly evolving business landscape, we stay ahead of the  curve by continuously refining our methodologies and embracing the latest trends and  technologies. This ensures that our clients always receive the most innovative and  cutting-edge solutions.",
@@ -290,7 +288,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   ),
                   const SizedBox(height: 100,),
                   SizedBox(
-                    height:450,
+                    height:700,
                     child: Center(
                       child: GridView.builder(
                         physics: const BouncingScrollPhysics(),
@@ -298,10 +296,10 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: false,
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 1,
-                             childAspectRatio: .5
+                            crossAxisCount: 2,
+                             childAspectRatio: .3
                         ), itemBuilder: (BuildContext context, int index) {
-                        return  GridViewWidget(index: index, size: 13.sp, titleSize: 14.sp,);
+                        return  GridViewWidget(index: index, size: 13.sp, titleSize: 13.sp,);
                       },
                       ),
                     ),

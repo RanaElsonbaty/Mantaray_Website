@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:mantaray_website/core/utils/app_colors.dart';
 import 'package:mantaray_website/features/our_services_section/widgets/highlighted_widget.dart';
 import 'package:mantaray_website/features/well_testing_section/data/model/product_model.dart';
@@ -171,7 +170,7 @@ class _EorSectionState extends State<EorSection> {
             : Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(bottom: 30),
+              padding: const EdgeInsets.only(bottom: 50),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -185,7 +184,7 @@ class _EorSectionState extends State<EorSection> {
                   Text(
                     "Enhanced Oil Recovery - EOR".toUpperCase(),
                     style: TextStyle(
-                        fontSize: getResponsiveFontSize(18).sp,
+                        fontSize: getResponsiveFontSize(16).sp,
                         fontWeight: FontWeight.bold,
                         color: AppColors.primaryColor),
                   ),
@@ -201,7 +200,7 @@ class _EorSectionState extends State<EorSection> {
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 100,vertical: 50),
               width: double.infinity,
-              height: 1200,
+              height: 950,
               decoration:  BoxDecoration(
                   color: AppColors.backGroundColor,
                   borderRadius: BorderRadiusDirectional.circular(20)
@@ -215,7 +214,7 @@ class _EorSectionState extends State<EorSection> {
                   Expanded(
                     child: Row(
                       children: [
-                        SizedBox(width: 8.w,),
+                        SizedBox(width: 13.w,),
                         Expanded(
                             child: ListView.separated(
                               shrinkWrap: true,
@@ -223,7 +222,7 @@ class _EorSectionState extends State<EorSection> {
                               itemCount: productsBottom.length,
                               scrollDirection: Axis.horizontal,
                               itemBuilder: (context, index) {
-                                return ProductBottomWidget(index: index, titleFontSize: getResponsiveFontSize(15).sp, containerHeight: 650, containerWidth: 400, imageHeight:250, imageWidth: 550, descriptionFontSize: 36, moreFontSize: 36, showSize: 32,);
+                                return ProductBottomWidget(index: index, titleFontSize: getResponsiveFontSize(14).sp, containerHeight: 400, containerWidth: 300, imageHeight:150, imageWidth: 300, descriptionFontSize: 24, moreFontSize: 20, showSize: 20,);
                               }, separatorBuilder: (BuildContext context, int index) {
                               return SizedBox(width: 5.w,);
                             },
