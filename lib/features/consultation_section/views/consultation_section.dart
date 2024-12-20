@@ -201,7 +201,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   ),
                   const SizedBox(height: 40,),
                   SizedBox(
-                    height: 270,
+                    height: 275,
                     child: GridView.builder(
                       physics: const BouncingScrollPhysics(),
                       itemCount: 4,
@@ -288,7 +288,7 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                   ),
                   const SizedBox(height: 100,),
                   SizedBox(
-                    height:700,
+                    height:920,
                     child: Center(
                       child: GridView.builder(
                         physics: const BouncingScrollPhysics(),
@@ -296,8 +296,8 @@ class _ConsultationSectionState extends State<ConsultationSection> {
                         scrollDirection: Axis.horizontal,
                         shrinkWrap: false,
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                             childAspectRatio: .3
+                            crossAxisCount: 4,
+                            childAspectRatio: .1
                         ), itemBuilder: (BuildContext context, int index) {
                         return  GridViewWidget(index: index, size: 13.sp, titleSize: 13.sp,);
                       },

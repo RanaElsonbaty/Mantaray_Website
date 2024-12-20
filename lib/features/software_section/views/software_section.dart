@@ -162,11 +162,11 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                                 )
                             ),),
                         ),
-                        SizedBox(height: 7.h,),
+                        SizedBox(height: 2.h,),
                         Image.asset(AppImages.softwareLogoImage,height: 10.h,width: 10.w,),
                         Container(
                             margin: EdgeInsets.symmetric(horizontal: 5.w),
-                            child: Image.asset(AppImages.softwareSectionImage,height: 450,
+                            child: Image.asset(AppImages.softwareSectionImage,height: 400,
                               fit: BoxFit.fill,)),
 
                       ],
@@ -227,11 +227,11 @@ class _SoftwareSectionState extends State<SoftwareSection> {
                                 )
                             ),),
                         ),
-                        SizedBox(height: 10.h,),
+                        SizedBox(height: 2.h,),
                         Image.asset(AppImages.softwareLogoImage,width: 8.w,),
                         Container(
                           margin: EdgeInsets.symmetric(horizontal: 20.w),
-                            child: Image.asset(AppImages.softwareSectionImage,height: 600,
+                            child: Image.asset(AppImages.softwareSectionImage,height: 580,
                             fit: BoxFit.fill,)),
 
                       ],

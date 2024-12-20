@@ -269,18 +269,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 buildSection(
                     key: _softwareKey,
                     widget: const SoftwareSection(),
-                    height: isMobile ? 520 : isTablet ? 850 : 1200,
+                    height: isMobile ? 535 : isTablet ? 700 : 920,
                     color: AppColors.whiteColor),
                 buildSection(
                     key: _consultationKey,
                     widget: const ConsultationSection(),
-                    height: isMobile ? 2050 : isTablet ? 1000 : 1900,
+                    height: isMobile ? 2050 : isTablet ? 1000 : 2000,
                     color: AppColors.whiteColor),
                 const ReserviorSection(),
                 buildSection(
                     key: _aboutUsKey,
                     widget: const AboutUsSection(),
-                    height: isMobile ? 250 : isTablet ? 350 : 600,
+                    height: isMobile ? 260 : isTablet ? 350 : 530,
                     color: AppColors.whiteColor),
                 ClipRRect(
                   borderRadius: BorderRadius.only(topRight: Radius.circular(14.sp),topLeft:  Radius.circular(14.sp)),
@@ -323,18 +323,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   buildSection(
                       key: _softwareKey,
                       widget: const SoftwareSection(),
-                      height: isMobile ? 520 : isTablet ? 850 : 1200,
+                      height: isMobile ? 535 : isTablet ? 700 : 920,
                       color: AppColors.whiteColor),
                   buildSection(
                       key: _consultationKey,
                       widget: const ConsultationSection(),
-                      height: isMobile ? 2050 : isTablet ? 1000 : 1900,
+                      height: isMobile ? 2050 : isTablet ? 1000 : 2000,
                       color: AppColors.whiteColor),
                   const ReserviorSection(),
                   buildSection(
                       key: _aboutUsKey,
                       widget: const AboutUsSection(),
-                      height: isMobile ? 250 : isTablet ? 350 : 600,
+                      height: isMobile ? 260 : isTablet ? 350 : 530,
                       color: AppColors.whiteColor),
                   ClipRRect(
                     borderRadius: BorderRadius.only(topRight: Radius.circular(14.sp),topLeft:  Radius.circular(14.sp)),
